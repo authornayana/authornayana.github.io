@@ -1,0 +1,169 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FBEEE6;
+}
+h1 {
+    font-size:28px;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+.header-design, .header-design-mobile {
+    background: #566573 ;
+    color: #fff;
+    text-align:center;
+    padding:10px;
+    display:block;
+}
+.header-design-mobile {
+    display: none;
+}
+.footer-design {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    background: #566573;
+    color: #fff;
+    text-align:center;
+    font-size:14px;
+    padding:3px;
+
+}
+.nav-background {
+    background-color: #2E86C1 !important;
+}
+.nav-link {
+    color: #fff !important;
+
+}
+.nav-item.active {
+    background-color: #566573;
+}
+
+.details-wrapper {
+    padding: 100px;
+    margin: 0;
+}
+.quotes-wrapper {
+    padding: 50px 0;
+    margin: 0 auto;
+
+}
+.qoutes-right {
+    text-align: right;
+}
+.qoutes-left {
+    text-align: left;
+}
+.cls {
+    border:1px solid red;
+}
+.myphoto {
+    max-height: 400px;
+    float: right;
+}
+.aboutme {
+    padding: 40px 0;
+    vertical-align: middle;
+    font-size: 22px;
+    color: #566573;
+}
+.aboutbook {
+    padding: 10px 0;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #566573;
+
+}
+.details {
+    margin: 0 auto;
+    text-align:center;
+}
+.quoteimg {
+    margin:0 auto 10px;
+    height:180px;
+    width:300px;
+}
+.contactdetails {
+    margin: 0 auto;
+    border: 2px solid#566573;
+    padding: 15px;
+}
+.contact1 {
+    font-size: 30px;
+    text-align: center;
+    color: #566573;
+}
+.contact2 {
+    font-size: 25px;
+    text-align: center;
+    background: #566573;
+    color: #fff;
+    border-radius: 30px;
+    height: 40px;
+    padding: 4px;
+}
+.contact3 {
+    font-size: 20px;
+    text-align: center;
+    background: #566573;
+    color: #fff;
+    border-radius: 40px;
+    height: 40px;
+    padding: 4px;
+}
+@media only screen and (max-width: 768px) {
+    .aboutme {
+        padding: 20px 0;
+       font-size: 18px;
+        
+    }
+    .myphoto {
+        float: inherit;
+        max-height: 200px;
+        text-align: center;
+    }
+    .details {
+        padding:20px 10px;
+    }
+    .header-design{
+        display:none;
+    }
+    .header-design-mobile {
+        display: block;
+    }
+    .details-wrapper {
+        padding: 50px 10px;
+        
+    }
+    .qoutes-right{
+        text-align: center;
+
+    }
+    .qoutes-left {
+        text-align: center;
+
+    }
+    .quotes-wrapper {
+        padding: 20px 0;
+    
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .quoteimg {
+        width:270px;
+        height:160px;
+    }
+    .contact2 {
+        font-size: 20px;
+       
+    }
+    .contact3 {
+        font-size: 16px;
+       
+    }
+   
+
+      }
