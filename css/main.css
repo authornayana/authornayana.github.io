@@ -9,6 +9,7 @@ h1 {
     padding: 0;
     margin: 0;
     font-weight: bold;
+    text-align: center;
 }
 .header-design, .header-design-mobile {
     background: #566573 ;
@@ -43,7 +44,7 @@ h1 {
 }
 
 .details-wrapper {
-    padding: 100px;
+    padding: 70px;
     margin: 0;
 }
 .quotes-wrapper {
@@ -61,19 +62,23 @@ h1 {
     border:1px solid red;
 }
 .myphoto {
+    max-height: 200px;
+    float: right;
+}
+.bookphoto {
     max-height: 400px;
     float: right;
 }
 .aboutme {
     padding: 40px 0;
     vertical-align: middle;
-    font-size: 22px;
+    font-size: 18px;
     color: #566573;
 }
 .aboutbook {
     padding: 10px 0;
     vertical-align: middle;
-    font-size: 20px;
+    font-size: 18px;
     color: #566573;
 
 }
@@ -114,13 +119,29 @@ h1 {
     height: 40px;
     padding: 4px;
 }
-@media only screen and (max-width: 768px) {
+.media-wrapper {
+    padding:40px 0;
+    margin:0 auto;
+
+}
+.storybox{
+    height: 150px;
+    margin: 10px;
+}
+.media-name {
+    font-size:12px;
+}
+@media only screen and (max-width: 868px) {
     .aboutme {
         padding: 20px 0;
        font-size: 18px;
         
     }
     .myphoto {
+        float: inherit;
+        text-align: center;
+    }
+    .bookphoto {
         float: inherit;
         max-height: 200px;
         text-align: center;
@@ -149,6 +170,10 @@ h1 {
     .quotes-wrapper {
         padding: 20px 0;
     
+    }
+    .storybox{
+        width: 200px;
+        margin: 10px auto 30px;
     }
   }
   @media only screen and (max-width: 360px) {
