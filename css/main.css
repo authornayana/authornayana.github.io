@@ -78,7 +78,7 @@ h1 {
 .aboutbook {
     padding: 10px 0;
     vertical-align: middle;
-    font-size: 18px;
+    font-size: 16px;
     color: #566573;
 
 }
@@ -130,6 +130,12 @@ h1 {
 }
 .media-name {
     font-size:12px;
+}
+.best-seller {
+    margin: 20px auto;
+}
+.best-sellerpic {
+    max-height: 230px;
 }
 @media only screen and (max-width: 868px) {
     .aboutme {
