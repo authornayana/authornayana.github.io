@@ -125,11 +125,11 @@ h1 {
 
 }
 .storybox{
-    height: 150px;
-    margin: 10px;
+    height: 270px;
+    margin: 30px;
 }
 .media-name {
-    font-size:12px;
+    font-size:14px;
 }
 .best-seller {
     margin: 20px auto;
@@ -177,9 +177,9 @@ h1 {
         padding: 20px 0;
     
     }
-    .storybox{
-        width: 200px;
-        margin: 10px auto 30px;
+    .storybox {
+        height: 390px;
+        margin: 30px;
     }
   }
   @media only screen and (max-width: 360px) {
