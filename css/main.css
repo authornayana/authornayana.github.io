@@ -137,6 +137,9 @@ h1 {
 .best-sellerpic {
     max-height: 230px;
 }
+.nav-underline {
+    text-decoration: underline;
+}
 @media only screen and (max-width: 868px) {
     .aboutme {
         padding: 20px 0;
