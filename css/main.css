@@ -1,212 +1,203 @@
+
 body{
     margin:0;
     padding:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #FBEEE6;
+    font-family: "Quicksand", sans-serif;
+    background: #EFE7E3;
 }
-h1 {
-    font-size:28px;
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
-    text-align: center;
-}
-.header-design, .header-design-mobile {
-    background: #566573 ;
-    color: #fff;
-    text-align:center;
-    padding:10px;
-    display:block;
-}
-.header-design-mobile {
-    display: none;
-}
-.footer-design {
-    position: fixed;
-    bottom: 0;
-    width:100%;
-    background: #566573;
-    color: #fff;
-    text-align:center;
-    font-size:14px;
-    padding:3px;
 
+.my-logo {
+    color: #292a2c;
+    text-shadow: 1px 1px #292a2c;
+    font-family: "Fredericka the Great";
+    font-size: 35px;
+    letter-spacing: -3px;
+    margin-top: -11px;
+}
+#firstname {
+    height: 35px;
+}
+#lastname {
+    height:35px;
+    padding-right:20px;
 }
 .nav-background {
-    background-color: #2E86C1 !important;
+    background-color: #EFE7E3 !important;
 }
-.nav-link {
-    color: #fff !important;
-
+.nav-link .active{
+    color: #292a2c !important;
 }
-.nav-item.active {
-    background-color: #566573;
+.nav-item {
+        color: #918b8b;
+       font-weight: bold;
+    }
+.nav-wrapper {
+    margin: 50px 70px;
+    font-size: 20px;
 }
-
-.details-wrapper {
-    padding: 70px;
-    margin: 0;
-}
-.quotes-wrapper {
-    padding: 50px 0;
-    margin: 0 auto;
-
-}
-.qoutes-right {
-    text-align: right;
-}
-.qoutes-left {
-    text-align: left;
-}
-.cls {
-    border:1px solid red;
-}
-.myphoto {
-    max-height: 200px;
+nav.navbar {
     float: right;
+}
+
+
+.myphoto {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 4px;
 }
 .bookphoto {
-    max-height: 350px;
-    float: right;
+    max-height: 400px;
 }
 .aboutme {
-    padding: 40px 0;
-    vertical-align: middle;
     font-size: 18px;
-    color: #566573;
+    color: #292a2c;
+    text-align: justify;
 }
 .aboutbook {
-    padding: 10px 0;
-    vertical-align: middle;
-    font-size: 14px;
-    color: #566573;
+    font-size: 16px;
+    color: #292a2c;
+    text-align: justify;
 
 }
 .details {
     margin: 0 auto;
-    text-align:center;
+    text-align:left;
 }
 .bookdetails {
     margin: 0 auto 70px;
-    text-align:center;
+    text-align: center;
 
 }
-.quoteimg {
-    margin:0 auto 10px;
-    height:180px;
-    width:300px;
+.book-link {
+    font-size: 14px;
+    margin: 10px 0;
 }
-.contactdetails {
-    margin: 0 auto;
-    border: 2px solid#566573;
-    padding: 15px;
-}
-.contact1 {
-    font-size: 30px;
-    text-align: center;
-    color: #566573;
-}
-.contact2 {
-    font-size: 25px;
-    text-align: center;
-    background: #566573;
-    color: #fff;
-    border-radius: 30px;
-    height: 40px;
-    padding: 4px;
-}
-.contact3 {
-    font-size: 20px;
-    text-align: center;
-    background: #566573;
-    color: #fff;
-    border-radius: 40px;
-    height: 40px;
-    padding: 4px;
-}
+
 .media-wrapper {
-    padding:40px 0;
-    margin:0 auto;
+    padding: 40px 0;
+}
+.storybox1 {
+    height: auto;
+    width: 260px;
+    padding: 10px;
+    float: right;
+}
+.storybox2 {
+    height: auto;
+    width: 260px;
+    padding: 10px;
+    float: left;
+}
 
-}
-.storybox{
-    height: 270px;
-    margin: 30px;
-}
-.media-name {
-    font-size:14px;
-}
 .best-seller {
     margin: 20px auto;
 }
 .best-sellerpic {
-    max-height: 230px;
+    max-height: 300px;
 }
-.nav-underline {
-    text-decoration: underline;
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    font-family: "Quicksand", sans-serif;
+    background: #EFE7E3;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 33px;
+    color: #292a2c;
+    display: block;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  
+  .overlay .nav-link:hover, .overlay .nav-link:focus {
+    color: #292a2c !important;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    font-size: 60px;
+  }
+  .contactbox {
+    background: #fff;
+    margin: 70px auto;
+    border-radius: 20px;
+    padding: 50px 0;
 }
-@media only screen and (max-width: 868px) {
-    .aboutme {
-        padding: 20px 0;
-       font-size: 18px;
-        
-    }
-    .myphoto {
-        float: inherit;
-        text-align: center;
-    }
-    .bookphoto {
-        float: inherit;
-        max-height: 200px;
-        text-align: center;
-    }
-    .details {
-        padding:20px 10px;
-    }
-    .bookdetails {
-        margin: 0 auto;
-        padding:20px 10px;
-    }
-    .header-design{
-        display:none;
-    }
-    .header-design-mobile {
-        display: block;
-    }
-    .details-wrapper {
-        padding: 25px 10px;
-        
-    }
-    .qoutes-right{
-        text-align: center;
+.contactbox h1{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.contactbox h2{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 15px;
+}
+.emailbox{
+    text-align: center;
+}
+.emailbox img {
+    height: 120px;
+}
 
+.GlamuPdetails {
+    background: #ffffff;
+    height: 100%;
+}
+@media only screen and (max-width: 991px) {
+    .aboutme{
+      margin-top:20px;
     }
-    .qoutes-left {
-        text-align: center;
-
+    .aboutbook {
+        margin-top:20px;
     }
-    .quotes-wrapper {
-        padding: 20px 0;
-    
-    }
-    .storybox {
-        height: 390px;
-        margin: 30px;
+    .nav-wrapper {
+        margin: 35px 70px;
     }
   }
-  @media only screen and (max-width: 360px) {
-    .quoteimg {
-        width:270px;
-        height:160px;
+  @media only screen and (max-width: 639px) {
+    .storybox1, .storybox2 {
+        width: 160px;
     }
-    .contact2 {
-        font-size: 20px;
-       
+  }
+  @media only screen and (max-width: 600px)
+  {
+    .nav-wrapper {
+        margin: 35px;
     }
-    .contact3 {
-        font-size: 16px;
-       
-    }
-   
+    .contactbox h1{
+        font-size: 25px;
+   }
+}
 
-      }
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    
+  }
+  
+
