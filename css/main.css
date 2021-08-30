@@ -160,9 +160,15 @@ nav.navbar {
     height: 120px;
 }
 
-.GlamuPdetails {
-    background: #ffffff;
-    height: 100%;
+.projectdetails {
+ 
+    margin-bottom: 80px;
+}
+.project-title {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    text-shadow: 2px 2px #fff;
 }
 @media only screen and (max-width: 991px) {
     .aboutme{
