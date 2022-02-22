@@ -171,6 +171,29 @@ nav.navbar {
     text-shadow: 2px 2px #fff;
     font-size: 45px;
 }
+.box-wrapper {
+    background: #ffffff;
+    margin: 20px 0;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+.box-image{
+    padding: 20px;
+}
+.box-content {
+    padding: 100px 0;
+    text-align: center;
+}
+.view-study {
+    margin-top: 40px;
+}
+a.view-studylink {
+    background: #000000;
+    padding: 16px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+}
 @media only screen and (max-width: 991px) {
     .aboutme{
       margin-top:20px;
