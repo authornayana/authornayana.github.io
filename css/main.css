@@ -176,6 +176,7 @@ nav.navbar {
     margin: 20px 0;
     border: 1px solid #dddddd;
     padding: 10px;
+    min-height: 480px;
 }
 .box-image{
     padding: 20px;
@@ -183,6 +184,10 @@ nav.navbar {
 .box-content {
     padding: 100px 0;
     text-align: center;
+}
+.box-content2 {
+    text-align: center;
+    padding-bottom: 30px;
 }
 .view-study {
     margin-top: 40px;
