@@ -5,6 +5,9 @@ body{
     font-family: "Quicksand", sans-serif;
     background: #EFE7E3;
 }
+.h2, h2 {
+    font-size: 22px;
+}
 
 .my-logo {
     color: #292a2c;
