@@ -206,11 +206,17 @@ a.view-studylink {
     border-radius: 10px;
 }
 .backlink {
-    background: #ffffff;
+    background: #000000;
     padding: 8px 30px;
     text-decoration: none;
     border-radius: 10px;
     font-size: 16px;
+    color: #ffffff;
+}
+.backlink:hover {
+    color: #ffffff;
+    text-decoration: none;
+
 }
 @media only screen and (max-width: 991px) {
     .aboutme{
