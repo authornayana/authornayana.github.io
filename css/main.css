@@ -17,6 +17,9 @@ body{
     letter-spacing: -3px;
     margin-top: -11px;
 }
+.back-btn {
+    margin-top: 20px;
+}
 #firstname {
     height: 35px;
 }
@@ -201,6 +204,13 @@ a.view-studylink {
     color: #ffffff;
     text-decoration: none;
     border-radius: 10px;
+}
+.backlink {
+    background: #ffffff;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
 }
 @media only screen and (max-width: 991px) {
     .aboutme{
