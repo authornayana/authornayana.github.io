@@ -1,96 +1,369 @@
 <!DOCTYPE html>
-<html>
-     <head>
-         <title>Nayana Phukan</title>
-         <meta charset="UTF-8">
-         <meta name="description" content="Nayana Phukan">
-         <meta name="keywords" content="Nayana, Phukan, Nayana Phukan, Author Nayana, author, dawn in florence">
-         <meta name="author" content="Nayana Phukan">
-         <meta content="width=device-width, initial-scale=1" name="viewport" />
-         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-         <link rel="stylesheet" href="css/main.css">
-       
-     </head>
-     <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Stay | Virtual Check-in Application Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <script>
+        // Tailwind Configuration (CRITICAL for Custom Colors)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0f172a',
+                        'brand-blue': '#003366',
+                        'brand-gold': '#e8c46f',
+                        'bg-soft': '#f8fafc',
+                        // Map custom variables to Tailwind utilities for use in the HTML structure
+                        'hotel-primary': '#003366', 
+                        'hotel-secondary': '#e8c46f',
+                        'success': '#009a49',
+                        'danger': '#cc3333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base CSS Variables for Custom Styling (Prose-Custom) */
+        :root {
+            --hotel-primary: #003366; 
+            --hotel-secondary: #e8c46f; 
+            --brand-dark: #0f172a;
+            --success: #009a49;
+            --danger: #cc3333;
+        }
 
-      <div class="nav-wrapper">
-              <div class="row">
-                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5">
-                              <div class="back-btn">
-                                <a class="backlink" href="casestudy.html"> Back</a>
-                              </div>
-                            </div>
-                          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
-                                    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-background">
-                                      <button class="navbar-toggler" type="button" id="openNav" data-toggle="" data-target="" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                      </button>
-                                      <div class="collapse navbar-collapse" id="navbarNav">
-                                        <ul class="navbar-nav">
-                                          <li class="nav-item">
-                                            <a class="nav-link" href="index.html">Home</a>
-                                          </li>
-                                          <li class="nav-item active">
-                                            <a class="nav-link" href="work.html">Work</a>
-                                          </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="books.html">Books</a>
-                                          </li>
-                                         <li class="nav-item">
-                                            <a class="nav-link" href="contact.html">Contact</a>
-                                            </li>
-                                        </ul>
-                                      </div>
-                                    </nav>
+        /* Global Font and Color Enforcement */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: white;
+        }
+        
+        /* Typography for Narrative Section */
+        .prose-custom h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--brand-dark);
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--hotel-primary);
+        }
+        .prose-custom p, .prose-custom li {
+            line-height: 1.75;
+            color: #475569;
+        }
+        .prose-custom ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            padding-left: 0;
+        }
 
-                                    <!-- Navigation -->
-                                    
-                                      <div id="myNav" class="overlay">
-                                        <div class="nav-wrapper">
-                                          <div class="my-logo">
-                                            <div id="firstname"><em>Nayana</em></div>
-                                            <div id="lastname"><em>Phukan</em></div>
-                                          </div>
-                                        </div>
-                                        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
-                                        <div class="overlay-content">
-                                          <a class="nav-link" href="index.html">Home</a>
-                                          <a class="nav-link" href="work.html">Work</a>
-                                          <a class="nav-link" href="books.html">Books</a>
-                                         <a class="nav-link" href="contact.html">Contact</a>
-                                        </div>
-                                      </div>
-                                    
-                                    <!-- Navigation -->
-                          </div>
-                </div>
+        /* Styling for the new Persona and UJM boxes */
+        .artifact-box {
+            background-color: #f8faff;
+            border-left: 5px solid var(--hotel-primary);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Visuals Showcase Styling (Now within the flow) */
+        .visual-showcase {
+            background-color: #000000;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem; /* Spacing after narrative section */
+        }
+        .screen-placeholder {
+            /* Adjusted size: Slightly shorter, maintaining aspect ratio */
+            width: 100%;
+            padding-top: 175%; /* Approximates a taller iPhone screen ratio (e.g., 9:15.75) */
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem; /* Reduced font size for smaller containers */
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Styling for the UJM Table */
+        .ujm-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+        }
+        .ujm-table th, .ujm-table td {
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            vertical-align: top;
+        }
+        .ujm-table th {
+            background-color: #e2e8f0;
+            font-weight: 700;
+            color: var(--brand-dark);
+            text-transform: uppercase;
+        }
+        .ujm-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        /* --- USER FLOW DIAGRAM (HTML) STYLES --- */
+        .flow-container {
+            position: relative;
+            padding: 10px 0;
+            margin: 20px 0;
+        }
+        .flow-step {
+            background-color: #fff;
+            border: 2px solid var(--hotel-primary);
+            color: var(--brand-dark);
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin: 15px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .flow-decision {
+            background-color: #ffedd5;
+            border: 2px solid #f97316;
+            color: #f97316;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            text-align: center;
+            margin: 15px auto;
+            max-width: 80%;
+            transform: rotate(0deg); 
+        }
+        .flow-arrow {
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--hotel-primary);
+            line-height: 0.5;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+
+    <!-- NAVIGATION (Placeholder) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-slate-100 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tight text-brand-dark">Nayana Phukan</span>
+            <a href="index.html" class="text-sm font-medium hover:text-brand-blue transition">← Back to Portfolio</a>
         </div>
-        <div class="container">
-          <div class="row">
-           
-                
-                <div class="col-12 projectdetails">
-                
-                  
-                  <img src="images/1-safestay.jpg" class="img-responsive myphoto"></img>
-                  <img src="images/2-safestay.jpg" class="img-responsive myphoto"></img>
-                  <img src="images/3-safestay.jpg" class="img-responsive myphoto"></img>
-                  <img src="images/4-safestay.jpg" class="img-responsive myphoto"></img>
-                  <img src="images/5-safestay.jpg" class="img-responsive myphoto"></img>
-                  <img src="images/6-safestay.jpg" class="img-responsive myphoto"></img>
-                   <img src="images/lastslide.jpg" class="img-responsive myphoto"></img>
-                </div>
+    </nav>
 
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider text-brand-blue uppercase bg-blue-100 rounded-full">Senior UX Case Study</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 leading-tight">
+                Safe Stay: Designing a Contactless Check-in and Check-out Experience
+            </h1>
+            <p class="text-xl text-slate-500 font-light leading-relaxed">
+                Safe Stay is a mobile application designed to simplify the hotel experience through a fast, contactless check-in and check-out process. Guests authenticate their stay by entering their booking ID and last name, allowing them to bypass the front desk entirely. The app securely handles ID verification and payment authorization to provide a digital key that unlocks the room door instantly. During the stay, guests can access concierge services like room service and spa bookings directly through the interface. To finish the journey, the express check-out feature provides a clear summary of charges, allowing guests to pay and depart with a single tap.
+        </div>
+    </header>
 
-              </div>
-          </div>
+    <!-- KEY STATS GRID -->
+    <section class="border-y border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">My Role</span>
+                <span class="font-medium text-slate-900">Lead Product Designer</span>
+            </div>
+            <div>
+                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Timeline</span>
+                <span class="font-medium text-slate-900">1 Month (Concept to Pilot)</span>
+            </div>
+            <div>
+                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Platform</span>
+                <span class="font-medium text-slate-900">iOS & Android Native</span>
+            </div>
+            <div>
+                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Outcome</span>
+                <span class="text-green-600 font-bold">80% Reduction in Wait Time</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER (Now Single Column Flow) -->
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        
+        <!-- NARRATIVE ARTIFACTS SECTION -->
+        <article class="prose-custom">
             
-        </div>
+            <!-- 1. PROBLEM & GOALS -->
+            <section class="mb-8">
+                <h2>I. Strategic Framing: Problem & Goals</h2>
+                <h3 class="text-red-600">The Problem (The Business Pain)</h3>
+                <p>Traditional hotel check-in and check-out processes are often slow and inconvenient for modern travelers. Guests are frequently forced to wait in long lines at the front desk just to verify their identity, provide a credit card for incidentals, and receive a physical key card. This friction creates a poor first impression, limits guest autonomy, and increases unnecessary physical contact in a high-traffic environment.</p>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
-   </body>
+                <div class="bg-brand-blue/5 border-l-4 border-brand-blue p-4 my-6 rounded-r-lg">
+                    <h3 class="!mt-0 text-lg !mb-2 text-brand-blue">Problem Statement</h3>
+                    <p class="!mb-0 italic text-slate-700 text-sm">How might we design a seamless, mobile-first experience that allows hotel guests to manage their stay independently? Travelers need a way to authenticate their identity, secure their room, and settle their final bill without the need for face-to-face interaction or physical key management.</p>
+                </div>
+            </section>
+            
+            <!-- 2. USER PERSONA & JOURNEY MAP -->
+            <section class="mb-8">
+                <h2>II. Discovery: Persona and User Journey</h2>
+                
+                <div class="artifact-box">
+                    <h3 class="text-brand-dark !mt-0">User Persona: The Efficiency-Driven Travelerr</h3>
+                    <p>Alex is a tech-savvy professional who travels frequently for work and values time above all else. His primary goal is to minimize friction and maximize efficiency during the check-in and check-out process so he can focus on his busy schedule. He needs a mobile experience that offers proactive status updates, clear privacy assurance during sensitive steps like ID verification, and a reliable digital key that never fails. Alex's biggest pain points are waiting in long lobby lines after a exhausting journey and the fear of hidden incidental charges; he requires a transparent, one-tap solution that provides total control over his stay from arrival to departure.</p>
+                </div>
+                
+                <h3 class="text-red-600">Artifact: User Journey Map (UJM)</h3>
+                <p>I mapped the entire traveler experience to identify emotional failures and digital opportunities. The UJM clearly contrasts the old, frustrating process with the new, efficient digital flow.</p>
+                <p>The UJM proved that solving the "Waiting in Queue" (Phase 2) and "Final Bill Payment" (Phase 5) moments would yield the highest user delight and business value.</p>
+                
+                <!-- UJM TABLE REPLACING IMAGE PLACEHOLDER -->
+                <div class="bg-gray-100 p-4 my-6 text-center rounded-lg shadow-inner overflow-x-auto">
+                    <table class="ujm-table min-w-full">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">Phase</th>
+                                <th style="width: 30%;">Old Process Pain Point</th>
+                                <th style="width: 25%;">Emotional State (Opportunity)</th>
+                                <th style="width: 30%;">New Digital Solution (Safe Stay)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Pre-Arrival</td>
+                                <td>Ambiguous check-in time, lack of clear next steps.</td>
+                                <td style="color: #0077b6; font-weight: 600;">Neutral to Anxious</td>
+                                <td>Proactive App Trigger: Initiates Express Check-in flow (ID, Payment pre-auth).</td>
+                            </tr>
+                            <tr>
+                                <td>2. Arrival</td>
+                                <td>Forced to wait in long queues at the front desk.</td>
+                                <td style="color: #cc3333; font-weight: 600;">Frustrated / Impatient</td>
+                                <td>Digital Check-in: Traveler skips the queue and is directed to the elevator/room.</td>
+                            </tr>
+                            <tr>
+                                <td>3. Access</td>
+                                <td>Key card may fail; user must return to the front desk.</td>
+                                <td style="color: #cc3333; font-weight: 600;">Annoyed / Stressed</td>
+                                <td>Reliable Digital Key: Immediate access upon check-in completion.</td>
+                            </tr>
+                            <tr>
+                                <td>4. Departure</td>
+                                <td>Must queue again for final bill settlement/folio clearance.</td>
+                                <td style="color: #cc3333; font-weight: 600;">Anxious / Stressed</td>
+                                <td>Express Check-Out: Automated bill summary and one-click payment processing.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <p class="text-sm text-slate-500 mt-2 italic">Visualizing the flow from traveler anxiety to digital delight.</p>
+                </div>
+                
+            </section>
+            
+            <!-- NEW SECTION III: DESIGN AND IMPLEMENTATION (Combines Flow, Visuals, and Solutions) -->
+            <section class="mb-8">
+                <h2>III. Design & Implementation</h2>
+                
+                <h3 class="text-red-600">The User Flow Diagram (UFD)</h3>
+                <p>The UFD directly translates the strategic needs identified in the UJM into a secure, sequential app process. Every screen is designed to facilitate a single, focused action:</p>
+                
+                <!-- USER FLOW DIAGRAM (HTML/CSS) - CORRECTED NODES AND LOGIC 
+                <div class="flow-container bg-white p-4 rounded-lg shadow-md border border-gray-100">
+                    <div class="flow-step">START EXPRESS CHECK-IN (Screen 1)</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">SECURE ID UPLOAD (Screen 2)</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">AUTHORIZE INCIDENTALS (Screen 3)</div>
+                    <div class="flow-arrow">▼</div>
+                    <div class="flow-step">CHECK-IN COMPLETE (Screen 4)</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                  
+                    <div class="flow-decision">UNLOCK DOOR?</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                    <div class="flow-step">HOME / CONCIERGE ACCESS (Screen 5)</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                  
+                    <div class="flow-decision">READY TO CHECK-OUT?</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                    <div class="flow-step">EXPRESS CHECK-OUT SUMMARY (Screen 6)</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                    
+                    <div class="flow-decision" style="background-color: #ffedd5; border-color: #f97316; color: #f97316;">PAYMENT GATEWAY SUCCESSFUL?</div>
+                    <div class="flow-arrow">▼</div>
+                    
+                    <div class="flow-step">CHECK-OUT CONFIRMATION (Screen 7)</div>
+                    
+                     <p class="text-sm text-slate-500 mt-2 italic">The sequential flow from authentication to digital key activation. Note: Final payment integrates with an external, secure gateway.</p>
+                </div> -->
+
+                <h3 class="text-red-600">Final 7-Screen Traveler Flow Mockups</h3>
+                <p>These screens show the sequential, step-by-step user experience designed for speed and security.</p>
+
+                <div class="visual-showcase">
+                    
+                    <!-- GRID STRUCTURE: grid-cols-2 on mobile, grid-cols-3 on desktop -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div><img src="images/page1.JPG" alt="Welcome & Authentication"></div>
+                        <div><img src="images/page2.JPG" alt="Secure ID Upload"></div>
+                        <div><img src="images/page3.JPG" alt="Payment & Incidentals"></div>
+                        <div><img src="images/page4.JPG" alt="Digital Key Ready"></div>
+                        <!-- Items 5, 6, and 7 will naturally flow to the next row (4, then 3) -->
+                        <div><img src="images/page5.JPG" alt="Home/Concierge"></div>
+                        <div><img src="images/page6.JPG" alt="Express Check-out Summary"></div>
+                        <div><img src="images/page7.JPG" alt="Express Check-out Success"></div>
+                    </div>
+                </div>
+
+                <h3 class="text-red-600">Key Design Solutions & Accessibility</h3>
+                <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                    <li>We built trust by clearly showing security messages (like "Privacy Assured") when users upload sensitive information (Screen 2).</li>
+                    <li>The Digital Key (Screen 5) was designed large and simple so users can unlock the door without having to look closely.</li>
+                    <li>On the final bill (Screen 6), we made sure to clearly display the release of the $100 incidental hold to avoid any confusion about charges.</li>
+                    <li>The entire app meets basic accessibility standards (WCAG AA), using strong color contrast and large touch targets for easy use.</li>
+                </ul>
+            </section>
+
+         
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-slate-400 py-12 text-center text-sm">
+        <p>&copy; 2026 Nayana Phukan. Designed with strategic intent.</p>
+    </footer>
+</body>
 </html>
