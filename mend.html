@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mend | Senior UX Case Study</title>
+    <style>
+        :root {
+            --primary-accent: #C98D32; /* Mend Golden Hour */
+            --bg-cream: #F5F2E7; /* Mend Heritage Cream */
+            --text-main: #333;
+            --link-blue: #0066cc;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin: 0; padding: 0;
+            background: #fff;
+        }
+        .nav-header { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; }
+        .back-link { color: var(--link-blue); text-decoration: none; font-size: 0.9rem; }
+        
+        .hero { padding: 60px 10% 40px; }
+        .ux-tag { color: var(--primary-accent); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+        h1 { font-size: 2.5rem; margin: 10px 0; line-height: 1.2; }
+        .intro-text { font-size: 1.1rem; max-width: 900px; margin-bottom: 40px; color: #555; }
+
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 30px 0; margin: 40px 0; }
+        .meta-item h4 { margin: 0; font-size: 0.8rem; text-transform: uppercase; color: #888; }
+        .meta-item p { margin: 5px 0 0; font-weight: bold; }
+
+        .content-section { padding: 40px 10%; }
+        h2 { font-size: 1.8rem; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h3 { font-size: 1.4rem; color: var(--primary-accent); margin-top: 30px; }
+        
+        .ujm-table { width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 0.9rem; }
+        .ujm-table th { background: #f9f9f9; text-align: left; padding: 15px; border: 1px solid #eee; }
+        .ujm-table td { padding: 15px; border: 1px solid #eee; vertical-align: top; }
+
+        .mockup-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
+        .mockup-gallery img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        
+        .highlight-list { list-style: none; padding: 0; }
+        .highlight-list li { margin-bottom: 15px; padding-left: 20px; position: relative; }
+        .highlight-list li::before { content: "•"; color: var(--primary-accent); position: absolute; left: 0; font-weight: bold; }
+
+        footer { padding: 40px 10%; border-top: 1px solid #eee; text-align: center; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-header">
+        <span>Nayana Phukan</span>
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <div class="hero">
+        <span class="ux-tag">Senior UX Case Study</span>
+        <h1>Mend: Humanizing AI Photo Restoration for Seniors</h1>
+        <p class="intro-text">
+            Mend is a mobile application designed to bridge the "tech-gap" for older users, transforming complex AI restoration into a dignified, accessible experience. Leveraging 11.5 years of industry experience, I developed this project to prove that high-level AI can be made intuitive for users with varying physical and cognitive needs.
+        </p>
+
+        <div class="meta-grid">
+            <div class="meta-item"><h4>My Role</h4><p>Senior Product Designer</p></div>
+            <div class="meta-item"><h4>Timeline</h4><p>Current (Designing Every Day)</p></div>
+            <div class="meta-item"><h4>Expertise</h4><p>AI/LLM Integration & Accessibility</p></div>
+            <div class="meta-item"><h4>Standards</h4><p>WCAG 2.1 AA Compliant</p></div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>I. Strategic Framing: The Problem</h2>
+        <h3>The "Tech-Gap" in AI</h3>
+        <p>While Generative AI is rapidly evolving, seniors—the primary keepers of family heritage—are often excluded. Traditional restoration tools are clinical, complex, and rely on sliders that require high dexterity.</p>
+        
+        <h2>II. Discovery: User Journey</h2>
+        <table class="ujm-table">
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Old Process Pain Point</th>
+                    <th>Emotional State</th>
+                    <th>Mend Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Scanning</td>
+                    <td>Glaring and blurry physical photos.</td>
+                    <td>Frustrated</td>
+                    <td>AI-Guided Scanning: Real-time feedback ensures a high-quality capture.</td>
+                </tr>
+                <tr>
+                    <td>2. Restoration</td>
+                    <td>Complex sliders and technical jargon.</td>
+                    <td>Confused</td>
+                    <td>Conversational AI: Users type or speak simple requests like "Make eyes sharper".</td>
+                </tr>
+                <tr>
+                    <td>3. Finalizing</td>
+                    <td>"Black box" AI processing feels opaque.</td>
+                    <td>Anxious</td>
+                    <td>System Transparency: Empathetic updates like "Mending Your Memory...".</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>III. Design & Implementation</h2>
+        <div class="mockup-gallery">
+            <img src="images/mend-screen1.JPG" alt="Welcome Screen">
+            <img src="images/mend-screen2.JPG" alt="Scanning Interface">
+            <img src="images/mend-screen3.JPG" alt="AI Restoration Flow">
+            
+        </div>
+
+        <h3>Key Design Solutions & Accessibility</h3>
+        <ul class="highlight-list">
+            <li><strong>Inclusive Accessibility:</strong> Implemented 48px+ touch targets and high-contrast #C98D32 buttons for users with limited dexterity.</li>
+            <li><strong>Heritage-First UI:</strong> Used a warm #F5F2E7 cream palette to evoke nostalgia and reduce digital eye strain.</li>
+            <li><strong>LLM Integration:</strong> Replaced complex UI controls with a natural language "Refine with AI" interface.</li>
+        </ul>
+    </div>
+
+    <footer>
+        © 2026 Nayana Phukan. Senior UX Design Leadership.
+    </footer>
+
+</body>
+</html>
