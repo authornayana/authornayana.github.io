@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Stay | Virtual Check-in Application Case Study</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet">
     <script>
         // Tailwind Configuration (CRITICAL for Custom Colors)
         tailwind.config = {
@@ -23,8 +22,7 @@
                         'danger': '#cc3333',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
                     }
                 }
             }
@@ -169,16 +167,15 @@
             padding: 5px 0;
         }
     </style>
-</head>
-<body class="bg-white font-sans">
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.\!mb-0{margin-bottom:0px !important}.\!mb-2{margin-bottom:0.5rem !important}.\!mt-0{margin-top:0px !important}.mb-1{margin-bottom:0.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-16{height:4rem}.w-full{width:100%}.min-w-full{min-width:100%}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.list-disc{list-style-type:disc}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-brand-blue{--tw-border-opacity:1;border-color:rgb(0 51 102 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-brand-blue\/5{background-color:rgb(0 51 102 / 0.05)}.bg-brand-dark{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.p-4{padding:1rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-20{padding-top:5rem;padding-bottom:5rem}.pb-16{padding-bottom:4rem}.pl-5{padding-left:1.25rem}.pt-32{padding-top:8rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-brand-blue{--tw-text-opacity:1;color:rgb(0 51 102 / var(--tw-text-opacity, 1))}.text-brand-dark{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:text-brand-blue:hover{--tw-text-opacity:1;color:rgb(0 51 102 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}}</style><style>.show-hint {display: block !important;}</style><style id="ar562473b1f0style">
+				.ar562473b1f0hidden{ position:absolute !important; opacity:0 !important; pointer-events:none !important}
+			</style></head>
+<body class="bg-white font-sans" cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1272.0" data-gr-ext-installed="">
 
-    <!-- NAVIGATION (Placeholder) -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-slate-100 z-50">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-xl tracking-tight text-brand-dark">Nayana Phukan</span>
-            <a href="index.html" class="text-sm font-medium hover:text-brand-blue transition">← Back to Portfolio</a>
-        </div>
-    </nav>
+    <div class="main-header">
+        <span class="logo">NAYANA PHUKAN</span>
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
 
     <!-- HERO SECTION -->
     <header class="pt-32 pb-16 px-6">
@@ -189,7 +186,7 @@
             </h1>
             <p class="text-xl text-slate-500 font-light leading-relaxed">
                 Safe Stay is a mobile application designed to simplify the hotel experience through a fast, contactless check-in and check-out process. Guests authenticate their stay by entering their booking ID and last name, allowing them to bypass the front desk entirely. The app securely handles ID verification and payment authorization to provide a digital key that unlocks the room door instantly. During the stay, guests can access concierge services like room service and spa bookings directly through the interface. To finish the journey, the express check-out feature provides a clear summary of charges, allowing guests to pay and depart with a single tap.
-        </div>
+        </p></div>
     </header>
 
     <!-- KEY STATS GRID -->
@@ -205,7 +202,7 @@
             </div>
             <div>
                 <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Platform</span>
-                <span class="font-medium text-slate-900">iOS & Android Native</span>
+                <span class="font-medium text-slate-900">iOS &amp; Android Native</span>
             </div>
             <div>
                 <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Outcome</span>
@@ -222,7 +219,7 @@
             
             <!-- 1. PROBLEM & GOALS -->
             <section class="mb-8">
-                <h2>I. Strategic Framing: Problem & Goals</h2>
+                <h2>I. Strategic Framing: Problem &amp; Goals</h2>
                 <h3 class="text-red-600">The Problem (The Business Pain)</h3>
                 <p>Traditional hotel check-in and check-out processes are often slow and inconvenient for modern travelers. Guests are frequently forced to wait in long lines at the front desk just to verify their identity, provide a credit card for incidentals, and receive a physical key card. This friction creates a poor first impression, limits guest autonomy, and increases unnecessary physical contact in a high-traffic environment.</p>
 
@@ -290,7 +287,7 @@
             
             <!-- NEW SECTION III: DESIGN AND IMPLEMENTATION (Combines Flow, Visuals, and Solutions) -->
             <section class="mb-8">
-                <h2>III. Design & Implementation</h2>
+                <h2>III. Design &amp; Implementation</h2>
                 
                 <h3 class="text-red-600">The User Flow Diagram (UFD)</h3>
                 <p>The UFD directly translates the strategic needs identified in the UJM into a secure, sequential app process. Every screen is designed to facilitate a single, focused action:</p>
@@ -336,9 +333,9 @@
                     
                     <!-- GRID STRUCTURE: grid-cols-2 on mobile, grid-cols-3 on desktop -->
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div><img src="images/page1.JPG" alt="Welcome & Authentication"></div>
+                        <div><img src="images/page1.JPG" alt="Welcome &amp; Authentication"></div>
                         <div><img src="images/page2.JPG" alt="Secure ID Upload"></div>
-                        <div><img src="images/page3.JPG" alt="Payment & Incidentals"></div>
+                        <div><img src="images/page3.JPG" alt="Payment &amp; Incidentals"></div>
                         <div><img src="images/page4.JPG" alt="Digital Key Ready"></div>
                         <!-- Items 5, 6, and 7 will naturally flow to the next row (4, then 3) -->
                         <div><img src="images/page5.JPG" alt="Home/Concierge"></div>
@@ -347,7 +344,7 @@
                     </div>
                 </div>
 
-                <h3 class="text-red-600">Key Design Solutions & Accessibility</h3>
+                <h3 class="text-red-600">Key Design Solutions &amp; Accessibility</h3>
                 <ul class="list-disc pl-5 space-y-2 text-slate-700">
                     <li>We built trust by clearly showing security messages (like "Privacy Assured") when users upload sensitive information (Screen 2).</li>
                     <li>The Digital Key (Screen 5) was designed large and simple so users can unlock the door without having to look closely.</li>
@@ -362,8 +359,9 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-brand-dark text-slate-400 py-12 text-center text-sm">
-        <p>&copy; 2026 Nayana Phukan. Designed with strategic intent.</p>
+      <footer>
+        <p>&copy; 2026 Nayana Phukan. All rights reserved.</p>
+       
     </footer>
-</body>
-</html>
+
+<div style="display: none; position: fixed; right: 10px; bottom: 10px; z-index: 214891234123"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
