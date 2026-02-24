@@ -1,374 +1,93 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safe Stay | Virtual Check-in Application Case Study</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-	 <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet">
-    <script>
-        // Tailwind Configuration (CRITICAL for Custom Colors)
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-dark': '#0f172a',
-                        'brand-blue': '#003366',
-                        'brand-gold': '#e8c46f',
-                        'bg-soft': '#f8fafc',
-                        // Map custom variables to Tailwind utilities for use in the HTML structure
-                        'hotel-primary': '#003366', 
-                        'hotel-secondary': '#e8c46f',
-                        'success': '#009a49',
-                        'danger': '#cc3333',
-                    },
-                    fontFamily: {
-                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Base CSS Variables for Custom Styling (Prose-Custom) */
-        :root {
-            --hotel-primary: #003366; 
-            --hotel-secondary: #e8c46f; 
-            --brand-dark: #0f172a;
-            --success: #009a49;
-            --danger: #cc3333;
-        }
+    <title>Safe Stay | Senior UX Case Study</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
 
-        /* Global Font and Color Enforcement */
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #334155;
-            background-color: white;
-        }
-        
-        /* Typography for Narrative Section */
-        .prose-custom h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--brand-dark);
-        }
-        .prose-custom h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--hotel-primary);
-        }
-        .prose-custom p, .prose-custom li {
-            line-height: 1.75;
-            color: #475569;
-        }
-        .prose-custom ul {
-            list-style-type: disc;
-            margin-left: 1.5rem;
-            padding-left: 0;
-        }
-
-        /* Styling for the new Persona and UJM boxes */
-        .artifact-box {
-            background-color: #f8faff;
-            border-left: 5px solid var(--hotel-primary);
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-            border-radius: 0.5rem;
-        }
-
-        /* Visuals Showcase Styling (Now within the flow) */
-        .visual-showcase {
-            
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 3rem; /* Spacing after narrative section */
-        }
-        .screen-placeholder {
-            /* Adjusted size: Slightly shorter, maintaining aspect ratio */
-            width: 100%;
-            padding-top: 175%; /* Approximates a taller iPhone screen ratio (e.g., 9:15.75) */
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 1rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem; /* Reduced font size for smaller containers */
-            color: #94a3b8;
-            font-style: italic;
-        }
-
-        /* Styling for the UJM Table */
-        .ujm-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-            font-size: 0.875rem;
-        }
-        .ujm-table th, .ujm-table td {
-            padding: 10px;
-            border: 1px solid #e2e8f0;
-            text-align: left;
-            vertical-align: top;
-        }
-        .ujm-table th {
-            background-color: #e2e8f0;
-            font-weight: 700;
-            color: var(--brand-dark);
-            text-transform: uppercase;
-        }
-        .ujm-table tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-        
-        /* --- USER FLOW DIAGRAM (HTML) STYLES --- */
-        .flow-container {
-            position: relative;
-            padding: 10px 0;
-            margin: 20px 0;
-        }
-        .flow-step {
-            background-color: #fff;
-            border: 2px solid var(--hotel-primary);
-            color: var(--brand-dark);
-            padding: 12px 16px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            margin: 15px 0;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        .flow-decision {
-            background-color: #ffedd5;
-            border: 2px solid #f97316;
-            color: #f97316;
-            font-weight: 700;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            text-align: center;
-            margin: 15px auto;
-            max-width: 80%;
-            transform: rotate(0deg); 
-        }
-        .flow-arrow {
-            display: block;
-            text-align: center;
-            font-size: 1.5rem;
-            color: var(--hotel-primary);
-            line-height: 0.5;
-            padding: 5px 0;
-        }
-    </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.\!mb-0{margin-bottom:0px !important}.\!mb-2{margin-bottom:0.5rem !important}.\!mt-0{margin-top:0px !important}.mb-1{margin-bottom:0.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-16{height:4rem}.w-full{width:100%}.min-w-full{min-width:100%}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.list-disc{list-style-type:disc}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-brand-blue{--tw-border-opacity:1;border-color:rgb(0 51 102 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-brand-blue\/5{background-color:rgb(0 51 102 / 0.05)}.bg-brand-dark{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.p-4{padding:1rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-20{padding-top:5rem;padding-bottom:5rem}.pb-16{padding-bottom:4rem}.pl-5{padding-left:1.25rem}.pt-32{padding-top:8rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-brand-blue{--tw-text-opacity:1;color:rgb(0 51 102 / var(--tw-text-opacity, 1))}.text-brand-dark{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}
-.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}
-.text-slate-500{--tw-text-opacity:1; font-size: 1.1rem !important; color: #555 !important;}
-.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}
-.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}
-h1{ line-height:1.2 !important;}
-.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);
-box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
-.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:text-brand-blue:hover{--tw-text-opacity:1;color:rgb(0 51 102 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:text-5xl{font-size:3rem;line-height:1}}</style><style>.show-hint {display: block !important;}</style><style id="ar562473b1f0style">
-				.ar562473b1f0hidden{ position:absolute !important; opacity:0 !important; pointer-events:none !important}
-			</style></head>
-<body class="bg-white font-sans" cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1272.0" data-gr-ext-installed="">
-
-    <div class="main-header">
-        <span class="logo">NAYANA PHUKAN</span>
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
-    </div>
-
-    <!-- HERO SECTION -->
-    <header class="pt-32 pb-16 px-6">
-        <div class="max-w-6xl mx-auto">
-           
-            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 leading-tight">
-                Safe Stay: Designing a Contactless Check-in and Check-out Experience
-            </h1>
-            <p class="text-xl text-slate-500 font-light leading-relaxed">
-                Safe Stay is a mobile application designed to simplify the hotel experience through a fast, contactless check-in and check-out process. Guests authenticate their stay by entering their booking ID and last name, allowing them to bypass the front desk entirely. The app securely handles ID verification and payment authorization to provide a digital key that unlocks the room door instantly. During the stay, guests can access concierge services like room service and spa bookings directly through the interface. To finish the journey, the express check-out feature provides a clear summary of charges, allowing guests to pay and depart with a single tap.
-        </p></div>
+    <header class="main-header">
+        <div class="logo">NAYANA PHUKAN</div>
+        <nav class="nav-links">
+            <a href="index.html#work">UX Work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- KEY STATS GRID -->
-    <section class="border-y border-slate-200 bg-white">
-        <div class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">My Role</span>
-                <span class="font-medium text-slate-900">Lead Product Designer</span>
+    <main class="section">
+        <div style="margin-bottom: var(--spacing-lg);">
+            <a href="index.html" style="font-weight: 700; font-size: 0.9rem; color: var(--color-accent-primary);">← BACK TO PORTFOLIO</a>
+            <h1 style="font-size: 3rem; margin-top: 20px;">Safe Stay: A Contactless Check-in and Check-out Experience</h1>
+            <p style="font-size: 1.25rem; color: var(--color-text); font-weight: 300;">
+                Safe Stay is a mobile application designed to simplify the hotel experience through a fast, contactless check-in and check-out process. Guests authenticate their stay by entering their booking ID and last name, allowing them to bypass the front desk entirely. The app securely handles ID verification and payment authorization to provide a digital key that unlocks the room door instantly. During the stay, guests can access concierge services like room service and spa bookings directly through the interface. To finish the journey, the express check-out feature provides a clear summary of charges, allowing guests to pay and depart with a single tap.
+            </p>
+        </div>
+
+        <div class="about-grid" style="margin-bottom: var(--spacing-lg);">
+            <div class="bio-card" style="padding: 25px;">
+                <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-accent-secondary);">My Role</h4>
+                <p style="font-weight: 700; color: var(--color-dark);">Lead Product Designer</p>
             </div>
-            <div>
-                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Timeline</span>
-                <span class="font-medium text-slate-900">1 Month (Concept to Pilot)</span>
+            <div class="bio-card" style="padding: 25px;">
+                <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-accent-secondary);">Outcome</h4>
+                <p style="font-weight: 700; color: #38b000;">80% Reduction in Wait Time</p>
             </div>
-            <div>
-                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Platform</span>
-                <span class="font-medium text-slate-900">iOS &amp; Android Native</span>
-            </div>
-            <div>
-                <span class="block text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Outcome</span>
-                <span class="text-green-600 font-bold">80% Reduction in Wait Time</span>
+            <div class="bio-card" style="padding: 25px;">
+                <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-accent-secondary);">Platform</h4>
+                <p style="font-weight: 700; color: var(--color-dark);">iOS & Android Native</p>
             </div>
         </div>
-    </section>
 
-    <!-- MAIN CONTENT CONTAINER (Now Single Column Flow) -->
-    <main class="max-w-4xl mx-auto px-6 py-20">
-        
-        <!-- NARRATIVE ARTIFACTS SECTION -->
-        <article class="prose-custom">
+     <article>
+            <h2 style="text-align: left; font-size: 2rem; margin-bottom: 20px;">Problem</h2>
+            <p style="margin-bottom: 30px;">Traditional hotel check-in and check-out processes are often slow and inconvenient for modern travelers. Guests are frequently forced to wait in long lines at the front desk just to verify their identity, provide a credit card for incidentals, and receive a physical key card. This friction creates a poor first impression, limits guest autonomy, and increases unnecessary physical contact in a high-traffic environment.</p>
             
-            <!-- 1. PROBLEM & GOALS -->
-            <section class="mb-8">
-                <h2>I. Strategic Framing: Problem &amp; Goals</h2>
-                <h3 class="text-red-600">The Problem (The Business Pain)</h3>
-                <p>Traditional hotel check-in and check-out processes are often slow and inconvenient for modern travelers. Guests are frequently forced to wait in long lines at the front desk just to verify their identity, provide a credit card for incidentals, and receive a physical key card. This friction creates a poor first impression, limits guest autonomy, and increases unnecessary physical contact in a high-traffic environment.</p>
+            <div class="bio-card" style="background: #f0f9ff; border-left: 5px solid var(--color-accent-primary); margin-bottom: 60px;">
+                <h3 style="color: var(--color-accent-primary);">Problem Statement</h3>
+                <p style="font-style: italic;">How might we design a seamless, mobile-first experience that allows hotel guests to manage their stay independently? Travelers need a way to authenticate their identity, secure their room, and settle their final bill without the need for face-to-face interaction or physical key management?</p>
+            </div>
 
-                <div class="bg-brand-blue/5 border-l-4 border-brand-blue p-4 my-6 rounded-r-lg">
-                    <h3 class="!mt-0 text-lg !mb-2 text-brand-blue">Problem Statement</h3>
-                    <p class="!mb-0 italic text-slate-700 text-sm">How might we design a seamless, mobile-first experience that allows hotel guests to manage their stay independently? Travelers need a way to authenticate their identity, secure their room, and settle their final bill without the need for face-to-face interaction or physical key management.</p>
-                </div>
-            </section>
+            <h2 style="text-align: left; font-size: 2rem; margin-top: 80px; margin-bottom: 40px;">Design & Implementation</h2>
             
-            <!-- 2. USER PERSONA & JOURNEY MAP -->
-            <section class="mb-8">
-                <h2>II. Discovery: Persona and User Journey</h2>
-                
-                <div class="artifact-box">
-                    <h3 class="text-brand-dark !mt-0">User Persona: The Efficiency-Driven Travelerr</h3>
-                    <p>Alex is a tech-savvy professional who travels frequently for work and values time above all else. His primary goal is to minimize friction and maximize efficiency during the check-in and check-out process so he can focus on his busy schedule. He needs a mobile experience that offers proactive status updates, clear privacy assurance during sensitive steps like ID verification, and a reliable digital key that never fails. Alex's biggest pain points are waiting in long lobby lines after a exhausting journey and the fear of hidden incidental charges; he requires a transparent, one-tap solution that provides total control over his stay from arrival to departure.</p>
+            <div class="case-study-visual-grid">
+                <div class="mockup-card">
+                    <img src="images/safestay-landing.jpg" alt="Welcome & Authentication">
                 </div>
-                
-                <h3 class="text-red-600">Artifact: User Journey Map (UJM)</h3>
-                <p>I mapped the entire traveler experience to identify emotional failures and digital opportunities. The UJM clearly contrasts the old, frustrating process with the new, efficient digital flow.</p>
-                <p>The UJM proved that solving the "Waiting in Queue" (Phase 2) and "Final Bill Payment" (Phase 5) moments would yield the highest user delight and business value.</p>
-                
-                <!-- UJM TABLE REPLACING IMAGE PLACEHOLDER -->
-                <div class="bg-gray-100 p-4 my-6 text-center rounded-lg shadow-inner overflow-x-auto">
-                    <table class="ujm-table min-w-full">
-                        <thead>
-                            <tr>
-                                <th style="width: 15%;">Phase</th>
-                                <th style="width: 30%;">Old Process Pain Point</th>
-                                <th style="width: 25%;">Emotional State (Opportunity)</th>
-                                <th style="width: 30%;">New Digital Solution (Safe Stay)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1. Pre-Arrival</td>
-                                <td>Ambiguous check-in time, lack of clear next steps.</td>
-                                <td style="color: #0077b6; font-weight: 600;">Neutral to Anxious</td>
-                                <td>Proactive App Trigger: Initiates Express Check-in flow (ID, Payment pre-auth).</td>
-                            </tr>
-                            <tr>
-                                <td>2. Arrival</td>
-                                <td>Forced to wait in long queues at the front desk.</td>
-                                <td style="color: #cc3333; font-weight: 600;">Frustrated / Impatient</td>
-                                <td>Digital Check-in: Traveler skips the queue and is directed to the elevator/room.</td>
-                            </tr>
-                            <tr>
-                                <td>3. Access</td>
-                                <td>Key card may fail; user must return to the front desk.</td>
-                                <td style="color: #cc3333; font-weight: 600;">Annoyed / Stressed</td>
-                                <td>Reliable Digital Key: Immediate access upon check-in completion.</td>
-                            </tr>
-                            <tr>
-                                <td>4. Departure</td>
-                                <td>Must queue again for final bill settlement/folio clearance.</td>
-                                <td style="color: #cc3333; font-weight: 600;">Anxious / Stressed</td>
-                                <td>Express Check-Out: Automated bill summary and one-click payment processing.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                     <p class="text-sm text-slate-500 mt-2 italic">Visualizing the flow from traveler anxiety to digital delight.</p>
+                <div class="mockup-card">
+                    <img src="images/safestay2.JPG" alt="Secure ID Upload">
                 </div>
-                
-            </section>
-            
-            <!-- NEW SECTION III: DESIGN AND IMPLEMENTATION (Combines Flow, Visuals, and Solutions) -->
-            <section class="mb-8">
-                <h2>III. Design &amp; Implementation</h2>
-                
-                
-                
-                <!-- USER FLOW DIAGRAM (HTML/CSS) - CORRECTED NODES AND LOGIC 
-                <div class="flow-container bg-white p-4 rounded-lg shadow-md border border-gray-100">
-                    <div class="flow-step">START EXPRESS CHECK-IN (Screen 1)</div>
-                    <div class="flow-arrow">▼</div>
-                    <div class="flow-step">SECURE ID UPLOAD (Screen 2)</div>
-                    <div class="flow-arrow">▼</div>
-                    <div class="flow-step">AUTHORIZE INCIDENTALS (Screen 3)</div>
-                    <div class="flow-arrow">▼</div>
-                    <div class="flow-step">CHECK-IN COMPLETE (Screen 4)</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                  
-                    <div class="flow-decision">UNLOCK DOOR?</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                    <div class="flow-step">HOME / CONCIERGE ACCESS (Screen 5)</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                  
-                    <div class="flow-decision">READY TO CHECK-OUT?</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                    <div class="flow-step">EXPRESS CHECK-OUT SUMMARY (Screen 6)</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                    
-                    <div class="flow-decision" style="background-color: #ffedd5; border-color: #f97316; color: #f97316;">PAYMENT GATEWAY SUCCESSFUL?</div>
-                    <div class="flow-arrow">▼</div>
-                    
-                    <div class="flow-step">CHECK-OUT CONFIRMATION (Screen 7)</div>
-                    
-                     <p class="text-sm text-slate-500 mt-2 italic">The sequential flow from authentication to digital key activation. Note: Final payment integrates with an external, secure gateway.</p>
-                </div> -->
-
-                <h3 class="text-red-600">Final 7-Screen Traveler Flow Mockups</h3>
-                <p>These screens show the sequential, step-by-step user experience designed for speed and security.</p>
-
-                <div class="visual-showcase">
-                    
-                    <!-- GRID STRUCTURE: grid-cols-2 on mobile, grid-cols-3 on desktop -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div><img src="images/safestay-landing.jpg" alt="Welcome &amp; Authentication"></div>
-                        <div><img src="images/safestay2.JPG" alt="Secure ID Upload"></div>
-                        <div><img src="images/safestay3.JPG" alt="Payment &amp; Incidentals"></div>
-                        <div><img src="images/safestay4.JPG" alt="Digital Key Ready"></div>
-                        <!-- Items 5, 6, and 7 will naturally flow to the next row (4, then 3) -->
-                        <div><img src="images/safestay5.JPG" alt="Home/Concierge"></div>
-                        <div><img src="images/safestay6.JPG" alt="Express Check-out Summary"></div>
-                        <div><img src="images/safestay7.JPG" alt="Express Check-out Success"></div>
-                    </div>
+                <div class="mockup-card">
+                    <img src="images/safestay3.JPG" alt="Payment & Incidentals">
                 </div>
-
-                <h3 class="text-red-600">Key Design Solutions &amp; Accessibility</h3>
-                <ul class="list-disc pl-5 space-y-2 text-slate-700">
-                    <li>We built trust by clearly showing security messages (like "Privacy Assured") when users upload sensitive information (Screen 2).</li>
-                    <li>The Digital Key (Screen 5) was designed large and simple so users can unlock the door without having to look closely.</li>
-                    <li>On the final bill (Screen 6), we made sure to clearly display the release of the $100 incidental hold to avoid any confusion about charges.</li>
-                    <li>The entire app meets basic accessibility standards (WCAG AA), using strong color contrast and large touch targets for easy use.</li>
-                </ul>
-            </section>
-
-         
+                <div class="mockup-card">
+                    <img src="images/safestay4.JPG" alt="Digital Key Ready">
+                </div>
+                <div class="mockup-card">
+                    <img src="images/safestay5.JPG" alt="In-App Concierge">
+                </div>
+                <div class="mockup-card">
+                    <img src="images/safestay6.JPG" alt="Express Check-out">
+                </div>
+				 <div class="mockup-card">
+                    <img src="images/safestay7.JPG" alt="Express Check-out">
+                </div>
+            </div>
+			<h2 style="text-align: left; font-size: 2rem; margin-top: 80px; margin-bottom: 20px;">Key Design Solutions & Accessibility </h2>
+				 <ul class="highlight-list">
+					<li>We built trust by clearly showing security messages (like "Privacy Assured") when users upload sensitive information (Screen 2).</li>
+					<li>The Digital Key (Screen 5) was designed large and simple so users can unlock the door without having to look closely.</li>
+					<li>On the final bill (Screen 6), we made sure to clearly display the release of the $100 incidental hold to avoid any confusion about charges.</li>
+					<li>The entire app meets basic accessibility standards (WCAG AA), using strong color contrast and large touch targets for easy use.</li>
+				</ul>
         </article>
-
     </main>
 
-    <!-- FOOTER -->
-      <footer>
-        <p>&copy; 2026 Nayana Phukan. All rights reserved.</p>
-       
+    <footer>
+        <p>© 2026 Nayana Phukan. Senior UX Design Leadership.</p>
     </footer>
 
-<div style="display: none; position: fixed; right: 10px; bottom: 10px; z-index: 214891234123"></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</body>
+</html>
