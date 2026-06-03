@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nayana Phukan · Senior Product Designer &amp; Published Author</title>
     <link rel="stylesheet" href="css/main.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ============================================================
            Index page upgrades — sits on top of css/main.css.
@@ -16,56 +13,32 @@
            ============================================================ */
 
         /* ── HERO refinements ───────────────────────────────────── */
-        .np-hero {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
+        .np-hero { padding-top: 60px; padding-bottom: 60px; }
         .np-hero .np-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; gap: 8px;
             background: rgba(56, 176, 0, .08);
             color: #1f7a00;
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: .78rem;
-            font-weight: 700;
-            letter-spacing: .3px;
+            padding: 6px 14px; border-radius: 999px;
+            font-size: .78rem; font-weight: 700; letter-spacing: .3px;
             margin-bottom: 22px;
         }
-
         .np-hero .np-status::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
+            content: ''; width: 8px; height: 8px; border-radius: 50%;
             background: #38b000;
-            box-shadow: 0 0 0 4px rgba(56, 176, 0, .15);
+            box-shadow: 0 0 0 4px rgba(56,176,0,.15);
             animation: np-pulse 2s ease-out infinite;
         }
-
         @keyframes np-pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(56, 176, 0, .45);
-            }
-
-            70% {
-                box-shadow: 0 0 0 8px rgba(56, 176, 0, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(56, 176, 0, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(56,176,0,.45); }
+            70% { box-shadow: 0 0 0 8px rgba(56,176,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(56,176,0,0); }
         }
-
         .np-hero h1 {
             font-size: 3.4rem !important;
             line-height: 1.05 !important;
             letter-spacing: -1.2px;
             margin-bottom: 18px !important;
         }
-
         .np-hero h1 .np-accent {
             background: linear-gradient(135deg, var(--color-accent-primary), #00b4d8);
             -webkit-background-clip: text;
@@ -73,7 +46,6 @@
             color: transparent;
             font-style: italic;
         }
-
         .np-hero .subtitle {
             font-size: 1.1rem !important;
             line-height: 1.55 !important;
@@ -81,43 +53,20 @@
             max-width: 540px;
             margin-bottom: 28px;
         }
-
         .np-hero .np-roles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 32px;
-            padding-top: 24px;
+            display: flex; flex-wrap: wrap; gap: 8px;
+            margin-top: 32px; padding-top: 24px;
             border-top: 1px solid #e5e7eb;
         }
-
         .np-hero .np-roles span {
-            font-size: .78rem;
-            font-weight: 600;
+            font-size: .78rem; font-weight: 600;
             color: var(--color-text);
-            padding: 5px 12px;
-            border-radius: 6px;
-            background: #f3f4f6;
-            border: 1px solid #e5e7eb;
+            padding: 5px 12px; border-radius: 6px;
+            background: #f3f4f6; border: 1px solid #e5e7eb;
         }
-
         .hero-image-wrapper {
             position: relative;
         }
-
-        /*.hero-image-wrapper::after {
-            content: '';
-            position: absolute;
-            top: -16px;
-            right: -16px;
-            width: 88px;
-            height: 88px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ffd166, #ef476f);
-            opacity: .85;
-            z-index: -1;
-            filter: blur(0.5px);
-        }*/
 
         /* ── Stats strip below hero ─────────────────────────────── */
         .np-stats {
@@ -130,33 +79,21 @@
             border-top: 1px solid #e5e7eb;
             border-bottom: 1px solid #e5e7eb;
         }
-
         .np-stat {
             text-align: center;
             padding: 10px 20px;
             border-right: 1px solid #e5e7eb;
         }
-
-        .np-stat:last-child {
-            border-right: 0;
-        }
-
+        .np-stat:last-child { border-right: 0; }
         .np-stat .v {
             font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 2rem; font-weight: 800;
             color: var(--color-dark);
-            line-height: 1;
-            letter-spacing: -0.5px;
+            line-height: 1; letter-spacing: -0.5px;
         }
-
-        .np-stat .v .accent {
-            color: var(--color-accent-primary);
-        }
-
+        .np-stat .v .accent { color: var(--color-accent-primary); }
         .np-stat .l {
-            font-size: .78rem;
-            font-weight: 700;
+            font-size: .78rem; font-weight: 700;
             color: var(--color-accent-secondary);
             text-transform: uppercase;
             letter-spacing: 1.2px;
@@ -169,23 +106,18 @@
             margin-bottom: 40px;
             max-width: var(--max-width);
         }
-
         .np-section-head .eyebrow {
-            font-size: .78rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: .78rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2px;
             color: var(--color-accent-primary);
             margin-bottom: 12px;
         }
-
         .np-section-head h2 {
             text-align: left !important;
             font-size: 2.4rem !important;
             margin-bottom: 14px !important;
             letter-spacing: -0.8px;
         }
-
         .np-section-head .lede {
             font-size: 1.1rem;
             color: var(--color-text);
@@ -196,13 +128,12 @@
         /* ── Case study cards — polished editorial cards ────────── */
         .np-case-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
-
+        .np-case-visual { min-height: 360px; }
         .np-case {
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
             background: var(--color-white);
             border: 1px solid #e5e7eb;
             border-radius: 20px;
@@ -210,13 +141,11 @@
             transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
         }
-
         .np-case:hover {
             transform: translateY(-6px);
             border-color: transparent;
-            box-shadow: 0 24px 48px rgba(0, 0, 0, .1);
+            box-shadow: 0 24px 48px rgba(0,0,0,.1);
         }
-
         .np-case-visual {
             padding: 40px 30px 30px;
             display: flex;
@@ -226,76 +155,71 @@
             position: relative;
             overflow: hidden;
         }
-
         .np-case-visual::before {
             content: '';
             position: absolute;
             inset: 0;
             z-index: 0;
         }
-
         .np-case.mend .np-case-visual {
             background: #F4ECD8;
         }
-
         .np-case.mend .np-case-visual::before {
             background:
-                radial-gradient(circle at 20% 30%, rgba(166, 110, 44, .12) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(217, 178, 122, .18) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(166,110,44,.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(217,178,122,.18) 0%, transparent 50%);
         }
-
         .np-case.stay .np-case-visual {
             background: linear-gradient(135deg, #0A2540 0%, #13314F 100%);
         }
-
         .np-case.stay .np-case-visual::before {
             background:
-                radial-gradient(circle at 80% 20%, rgba(0, 178, 169, .25) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(201, 169, 97, .15) 0%, transparent 50%);
+                radial-gradient(circle at 80% 20%, rgba(0,178,169,.25) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(201,169,97,.15) 0%, transparent 50%);
         }
-
-        .np-case-visual>* {
-            position: relative;
-            z-index: 1;
+        .np-case.moodbites .np-case-visual {
+            background: linear-gradient(160deg, #F4A261 0%, #8B4F47 100%);
         }
-
-        .np-case-body {
-            padding: 30px 30px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
+        .np-case.moodbites .np-case-visual::before {
+            background:
+                radial-gradient(circle at 80% 18%, rgba(255,255,255,.20) 0%, transparent 55%),
+                radial-gradient(circle at 15% 85%, rgba(123,75,148,.32) 0%, transparent 55%);
         }
+        .mini-phone.moodbites .mini-phone-screen { background: #FFFDF9; color: #1A1410; font-family: 'Inter', sans-serif; }
+        .mini-phone.moodbites .mini-status { color: #1A1410; }
+        .mini-mood-body { flex: 1; padding: 16px 16px 14px; display: flex; flex-direction: column; min-height: 0; }
+        .mini-mood-greet { font-size: 8px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #9B9389; }
+        .mini-mood-title { font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 500; line-height: 1.1; color: #1A1410; letter-spacing: -.4px; margin: 4px 0 12px; }
+        .mini-mood-pill { display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 13px; background: #fff; border: 1.5px solid #F0EBE0; margin-bottom: 7px; }
+        .mini-mood-pill.sel { border-color: #8B4F47; box-shadow: 0 0 0 3px #E8D4D0; }
+        .mini-mood-ring { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; }
+        .mini-mood-name { font-family: 'Fraunces', Georgia, serif; font-size: 13px; font-weight: 500; color: #1A1410; line-height: 1.1; }
+        .mini-mood-desc { font-size: 8.5px; color: #5C544A; margin-top: 1px; }
+        .mini-mood-btn { margin-top: auto; height: 38px; width: 100%; border: 0; border-radius: 12px; background: #7B4B94; color: #fff; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .mini-mood-btn svg { display: block; }
+        .np-case-visual > * { position: relative; z-index: 1; }
 
+        .np-case-body { padding: 30px 30px; display: flex; flex-direction: column; flex: 1; }
         .np-case-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: flex; flex-wrap: wrap; gap: 8px;
             margin-bottom: 16px;
         }
-
         .np-case-meta span {
-            font-size: .68rem;
-            font-weight: 800;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            border-radius: 6px;
-            background: #f3f4f6;
-            color: var(--color-text);
+            font-size: .68rem; font-weight: 800;
+            letter-spacing: 1.4px; text-transform: uppercase;
+            padding: 4px 10px; border-radius: 6px;
+            background: #f3f4f6; color: var(--color-text);
         }
-
         .np-case-meta .np-tag-accent {
             background: rgba(0, 119, 182, .1);
             color: var(--color-accent-primary);
         }
-
         .np-case h3 {
             font-size: 1.7rem !important;
             line-height: 1.2 !important;
             margin-bottom: 14px !important;
             letter-spacing: -0.4px;
         }
-
         .np-case p {
             font-size: 1rem;
             line-height: 1.6;
@@ -303,36 +227,25 @@
             margin-bottom: 20px;
             flex: 1;
         }
-
         .np-case-outcome {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; gap: 8px;
             padding: 12px 16px;
             background: #f0fdf4;
             border-radius: 10px;
             margin-bottom: 22px;
             border-left: 3px solid #10b981;
         }
-
         .np-case-outcome .l {
-            font-size: .7rem;
-            font-weight: 800;
+            font-size: .7rem; font-weight: 800;
             color: #047857;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            letter-spacing: 1px; text-transform: uppercase;
         }
-
         .np-case-outcome .v {
-            font-size: .92rem;
-            font-weight: 700;
+            font-size: .92rem; font-weight: 700;
             color: var(--color-dark);
         }
-
         .np-case-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; gap: 8px;
             color: var(--color-accent-primary);
             font-weight: 800;
             font-size: .92rem;
@@ -340,300 +253,166 @@
             transition: gap .2s ease;
             text-transform: uppercase;
         }
-
-        .np-case:hover .np-case-cta {
-            gap: 14px;
-        }
-
+        .np-case:hover .np-case-cta { gap: 14px; }
         .np-case-cta::after {
             content: '→';
             font-size: 1.1rem;
             line-height: 1;
         }
-
         .np-case-link {
-            position: absolute;
-            inset: 0;
-            z-index: 5;
+            position: absolute; inset: 0; z-index: 5;
             text-indent: -9999px;
             background: transparent;
         }
 
         /* ── MINI PHONE — Mend (warm cream + amber) ─────────────── */
         :root {
-            --m-paper: #F4ECD8;
-            --m-ink: #2A2113;
-            --m-ink2: #5C4F38;
-            --m-ink3: #8A7A5D;
-            --m-amber: #A66E2C;
-            --m-amber-dark: #7A4F1C;
+            --m-paper: #F4ECD8; --m-ink: #2A2113; --m-ink2: #5C4F38;
+            --m-ink3: #8A7A5D; --m-amber: #A66E2C; --m-amber-dark: #7A4F1C;
             --m-amber-wash: #EFDCB4;
-            --s-navy: #0A2540;
-            --s-ink: #0F1F33;
-            --s-ink2: #4F5D75;
-            --s-ink3: #8B95A6;
-            --s-teal: #00B2A9;
-            --s-teal-dark: #008F87;
-            --s-teal-wash: #E6F7F5;
-            --s-line: #E5E7EB;
+            --s-navy: #0A2540; --s-ink: #0F1F33; --s-ink2: #4F5D75;
+            --s-ink3: #8B95A6; --s-teal: #00B2A9; --s-teal-dark: #008F87;
+            --s-teal-wash: #E6F7F5; --s-line: #E5E7EB;
         }
-
         .mini-phone {
-            width: 230px;
-            height: 460px;
-            border-radius: 32px;
-            background: #000;
+            width: 230px; height: 460px;
+            border-radius: 32px; background: #000;
             padding: 6px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .1);
+            box-shadow: 0 30px 60px rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.1);
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-
         .mini-phone-screen {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             border-radius: 26px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
         }
-
-        .mini-phone.mend .mini-phone-screen {
-            background: #F4ECD8;
-            color: #2A2113;
-            font-family: 'Newsreader', Georgia, serif;
-        }
-
-        .mini-phone.stay .mini-phone-screen {
-            background: #FAFAFB;
-            color: #0F1F33;
-        }
-
+        .mini-phone.mend .mini-phone-screen { background: #F4ECD8; color: #2A2113; font-family: 'Newsreader', Georgia, serif; }
+        .mini-phone.stay .mini-phone-screen { background: #FAFAFB; color: #0F1F33; }
         .mini-island {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 20px;
-            background: #000;
-            border-radius: 14px;
-            z-index: 5;
+            position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+            width: 70px; height: 20px; background: #000; border-radius: 14px; z-index: 5;
         }
-
         .mini-status {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 16px 0;
-            font-size: 10px;
-            font-weight: 700;
+            height: 40px; display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 16px 0; font-size: 10px; font-weight: 700;
             font-family: -apple-system, system-ui, sans-serif;
-            position: relative;
-            z-index: 2;
+            position: relative; z-index: 2;
             flex-shrink: 0;
         }
-
-        .mini-phone.mend .mini-status {
-            color: #2A2113;
-        }
-
-        .mini-phone.stay .mini-status {
-            color: #0F1F33;
-        }
-
+        .mini-phone.mend .mini-status { color: #2A2113; }
+        .mini-phone.stay .mini-status { color: #0F1F33; }
         .mini-homebar {
-            position: absolute;
-            bottom: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            border-radius: 99px;
-            background: rgba(0, 0, 0, .25);
+            position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 3px; border-radius: 99px;
+            background: rgba(0,0,0,.25);
         }
-
-        .mini-phone.stay.dark .mini-homebar {
-            background: rgba(255, 255, 255, .35);
-        }
+        .mini-phone.stay.dark .mini-homebar { background: rgba(255,255,255,.35); }
 
         /* Mend hero card body */
         .mini-mend-body {
-            flex: 1;
-            padding: 22px 22px 16px;
-            display: flex;
-            flex-direction: column;
+            flex: 1; padding: 22px 22px 16px;
+            display: flex; flex-direction: column;
             text-align: center;
             justify-content: space-between;
             min-height: 0;
         }
-
         .mini-mend-logo {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            background: #A66E2C;
-            color: #FFF7E6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Newsreader', serif;
-            font-size: 22px;
-            font-weight: 500;
+            width: 42px; height: 42px; border-radius: 12px;
+            background: #A66E2C; color: #FFF7E6;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Newsreader', serif; font-size: 22px; font-weight: 500;
             margin: 0 auto;
-            box-shadow: 0 6px 18px rgba(166, 110, 44, .25);
+            box-shadow: 0 6px 18px rgba(166,110,44,.25);
         }
-
         .mini-mend-title {
             font-family: 'Newsreader', Georgia, serif;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.15;
-            color: #2A2113;
-            letter-spacing: -0.4px;
+            font-size: 20px; font-weight: 500; line-height: 1.15;
+            color: #2A2113; letter-spacing: -0.4px;
             margin-bottom: 8px;
         }
-
         .mini-mend-body p {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 11px;
-            line-height: 1.5;
+            font-size: 11px; line-height: 1.5;
             color: #5C4F38;
-            max-width: 170px;
-            margin: 0 auto;
+            max-width: 170px; margin: 0 auto;
         }
-
         .mini-mend-btn {
-            background: #A66E2C;
-            color: #FFF7E6;
-            border: 0;
-            border-radius: 22px;
-            height: 44px;
-            width: 100%;
+            background: #A66E2C; color: #FFF7E6;
+            border: 0; border-radius: 22px;
+            height: 44px; width: 100%;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 6px 18px rgba(166, 110, 44, .25);
+            font-size: 13px; font-weight: 600;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            box-shadow: 0 6px 18px rgba(166,110,44,.25);
         }
-
-        .mini-mend-btn svg {
-            display: block;
-        }
+        .mini-mend-btn svg { display: block; }
 
         /* Safe Stay welcome card body */
         .mini-stay-body {
-            flex: 1;
-            padding: 16px 18px;
-            display: flex;
-            flex-direction: column;
+            flex: 1; padding: 16px 18px;
+            display: flex; flex-direction: column;
             min-height: 0;
         }
-
         .mini-stay-logo-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; gap: 8px;
             margin-bottom: 18px;
         }
-
         .mini-stay-logo {
-            width: 26px;
-            height: 26px;
-            border-radius: 7px;
-            background: #0A2540;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 13px;
+            width: 26px; height: 26px; border-radius: 7px;
+            background: #0A2540; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 13px;
             flex-shrink: 0;
         }
-
         .mini-stay-name {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            color: #0A2540;
+            font-weight: 700; font-size: 14px; color: #0A2540;
             letter-spacing: -0.3px;
         }
-
         .mini-stay-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: #0F1F33;
-            margin-bottom: 4px;
-            letter-spacing: -0.3px;
+            font-size: 18px; font-weight: 700; color: #0F1F33;
+            margin-bottom: 4px; letter-spacing: -0.3px;
         }
-
         .mini-stay-sub {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 10px;
-            color: #4F5D75;
-            margin-bottom: 16px;
+            font-size: 10px; color: #4F5D75; margin-bottom: 16px;
         }
-
         .mini-stay-label {
-            font-size: 9px;
-            font-weight: 700;
-            color: #4F5D75;
-            text-transform: uppercase;
-            letter-spacing: .8px;
-            margin-bottom: 4px;
+            font-size: 9px; font-weight: 700;
+            color: #4F5D75; text-transform: uppercase;
+            letter-spacing: .8px; margin-bottom: 4px;
         }
-
         .mini-stay-input {
             background: #fff;
             border: 1.5px solid #E5E7EB;
             border-radius: 9px;
             padding: 10px 12px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            font-weight: 600;
-            color: #0F1F33;
-            letter-spacing: .5px;
+            font-size: 11px; font-weight: 600;
+            color: #0F1F33; letter-spacing: .5px;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between;
         }
-
         .mini-stay-input.focus {
             border-color: #00B2A9;
             box-shadow: 0 0 0 3px #E6F7F5;
         }
-
         .mini-stay-input.name {
             font-family: 'Plus Jakarta Sans', sans-serif;
             letter-spacing: 0;
         }
-
         .mini-stay-btn {
-            background: #00B2A9;
-            color: #fff;
-            border: 0;
-            border-radius: 10px;
-            height: 40px;
-            width: 100%;
+            background: #00B2A9; color: #fff;
+            border: 0; border-radius: 10px;
+            height: 40px; width: 100%;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            font-size: 12px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
             margin-top: 4px;
         }
-
-        .mini-stay-btn svg {
-            display: block;
-        }
+        .mini-stay-btn svg { display: block; }
 
         /* ── About refinements ──────────────────────────────────── */
         .np-about-grid {
@@ -642,7 +421,6 @@
             gap: 32px;
             margin-bottom: 50px;
         }
-
         .np-about-card {
             background: var(--color-white);
             border: 1px solid #e5e7eb;
@@ -650,29 +428,23 @@
             padding: 36px;
             transition: all .3s;
         }
-
         .np-about-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, .06);
+            box-shadow: 0 12px 24px rgba(0,0,0,.06);
             border-color: var(--color-accent-primary);
         }
-
         .np-about-card .label {
-            font-size: .72rem;
-            font-weight: 800;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
+            font-size: .72rem; font-weight: 800;
+            letter-spacing: 1.6px; text-transform: uppercase;
             color: var(--color-accent-primary);
             margin-bottom: 14px;
         }
-
         .np-about-card h3 {
             font-size: 1.5rem !important;
             color: var(--color-dark) !important;
             margin-bottom: 14px !important;
             letter-spacing: -0.3px;
         }
-
         .np-about-card p {
             font-size: .98rem;
             line-height: 1.65;
@@ -685,45 +457,31 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
-
         .np-skills-group {
             padding: 24px;
             background: #fafafb;
             border-radius: 12px;
             border: 1px solid #e5e7eb;
         }
-
         .np-skills-group .label {
-            font-size: .7rem;
-            font-weight: 800;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
+            font-size: .7rem; font-weight: 800;
+            letter-spacing: 1.6px; text-transform: uppercase;
             color: var(--color-accent-primary);
             margin-bottom: 14px;
         }
-
         .np-skills-group ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            list-style: none; margin: 0; padding: 0;
+            display: flex; flex-direction: column; gap: 8px;
         }
-
         .np-skills-group li {
             font-size: .95rem;
             color: var(--color-text);
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: flex; align-items: center; gap: 8px;
         }
-
         .np-skills-group li::before {
             content: '';
-            width: 5px;
-            height: 5px;
+            width: 5px; height: 5px;
             border-radius: 50%;
             background: var(--color-accent-primary);
             flex-shrink: 0;
@@ -737,37 +495,25 @@
             max-width: 880px;
             margin: 0 auto;
         }
-
         .np-book {
-            display: flex;
-            gap: 24px;
-            align-items: flex-start;
+            display: flex; gap: 24px; align-items: flex-start;
             background: var(--color-white);
             border: 1px solid #e5e7eb;
             border-radius: 16px;
             padding: 24px;
             transition: all .3s;
         }
-
         .np-book:hover {
             transform: translateY(-3px);
-            box-shadow: 0 14px 24px rgba(0, 0, 0, .06);
+            box-shadow: 0 14px 24px rgba(0,0,0,.06);
         }
-
         .np-book img {
-            width: 130px;
-            height: auto;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+            width: 130px; height: auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,.2);
             border-radius: 4px;
             flex-shrink: 0;
         }
-
-        .np-book-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
+        .np-book-content { flex: 1; display: flex; flex-direction: column; }
         .np-book h4 {
             font-size: 1.15rem;
             color: var(--color-dark);
@@ -775,7 +521,6 @@
             line-height: 1.2;
             letter-spacing: -0.2px;
         }
-
         .np-book .genre {
             font-size: .72rem;
             font-weight: 700;
@@ -784,7 +529,6 @@
             letter-spacing: 1.2px;
             margin-bottom: 12px;
         }
-
         .np-book p {
             font-size: .88rem;
             line-height: 1.55;
@@ -792,22 +536,16 @@
             margin-bottom: 14px;
             flex: 1;
         }
-
         .np-book a {
             font-size: .82rem;
             font-weight: 800;
             color: var(--color-accent-primary);
             text-transform: uppercase;
             letter-spacing: .5px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            display: inline-flex; align-items: center; gap: 6px;
             transition: gap .2s;
         }
-
-        .np-book a:hover {
-            gap: 10px;
-        }
+        .np-book a:hover { gap: 10px; }
 
         /* ── Contact polish ─────────────────────────────────────── */
         .np-contact {
@@ -817,57 +555,44 @@
             max-width: 880px;
             margin: 30px auto 0;
         }
-
         .np-contact-card {
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .1);
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.1);
             border-radius: 14px;
             padding: 28px 30px;
             transition: all .3s;
         }
-
         .np-contact-card:hover {
-            background: rgba(255, 255, 255, .06);
+            background: rgba(255,255,255,.06);
             border-color: #00d2ff;
         }
-
         .np-contact-card .icon {
-            width: 44px;
-            height: 44px;
+            width: 44px; height: 44px;
             border-radius: 12px;
             background: rgba(0, 210, 255, .12);
             color: #00d2ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-bottom: 16px;
         }
-
         .np-contact-card .label {
-            font-size: .72rem;
-            font-weight: 800;
+            font-size: .72rem; font-weight: 800;
             color: #00d2ff;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            text-transform: uppercase; letter-spacing: 1.5px;
             margin-bottom: 8px;
         }
-
         .np-contact-card .value {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--color-white);
             margin-bottom: 4px;
         }
-
         .np-contact-card .value a {
             color: var(--color-white);
             border: none;
         }
-
         .np-contact-card .value a:hover {
             color: #00d2ff;
         }
-
         .np-contact-card .desc {
             font-size: .85rem;
             color: #bdbdbd;
@@ -876,65 +601,20 @@
 
         /* ── Responsive ─────────────────────────────────────────── */
         @media (max-width: 900px) {
-            .np-stats {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .np-stat:nth-child(2) {
-                border-right: 0;
-            }
-
-            .np-stat:nth-child(1),
-            .np-stat:nth-child(2) {
-                border-bottom: 1px solid #e5e7eb;
-                padding-bottom: 18px;
-                margin-bottom: 18px;
-            }
-
-            .np-case-grid,
-            .np-about-grid,
-            .np-books-grid,
-            .np-contact {
-                grid-template-columns: 1fr;
-            }
-
-            .np-skills-grouped {
-                grid-template-columns: 1fr;
-            }
-
-            .np-hero h1 {
-                font-size: 2.4rem !important;
-            }
-
-            .np-section-head h2 {
-                font-size: 1.9rem !important;
-            }
+            .np-stats { grid-template-columns: 1fr 1fr; }
+            .np-stat:nth-child(2) { border-right: 0; }
+            .np-stat:nth-child(1), .np-stat:nth-child(2) { border-bottom: 1px solid #e5e7eb; padding-bottom: 18px; margin-bottom: 18px; }
+            .np-case-grid, .np-about-grid, .np-books-grid, .np-contact { grid-template-columns: 1fr; }
+            .np-skills-grouped { grid-template-columns: 1fr; }
+            .np-hero h1 { font-size: 2.4rem !important; }
+            .np-section-head h2 { font-size: 1.9rem !important; }
         }
-
         @media (max-width: 560px) {
-            .np-book {
-                flex-direction: column;
-            }
-
-            .np-book img {
-                width: 100%;
-                max-width: 180px;
-                margin: 0 auto;
-            }
-
-            .np-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .np-stat {
-                border-right: 0;
-                border-bottom: 1px solid #e5e7eb;
-                padding: 14px 0;
-            }
-
-            .np-stat:last-child {
-                border-bottom: 0;
-            }
+            .np-book { flex-direction: column; }
+            .np-book img { width: 100%; max-width: 180px; margin: 0 auto; }
+            .np-stats { grid-template-columns: 1fr; }
+            .np-stat { border-right: 0; border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+            .np-stat:last-child { border-bottom: 0; }
         }
     </style>
 </head>
@@ -955,7 +635,7 @@
     <!-- 2. Hero -->
     <section id="hero" class="hero-section np-hero">
         <div class="hero-content">
-
+            <div class="np-status">Available for select projects</div>
             <h1>Designing AI-native experiences with <span class="np-accent">human craft</span>.</h1>
             <p class="subtitle">
                 I'm Nayana — a Senior Product Designer and published author who builds scalable design systems
@@ -978,22 +658,10 @@
 
     <!-- 3. Stats strip -->
     <div class="np-stats">
-        <div class="np-stat">
-            <div class="v"><span class="accent">10</span>+</div>
-            <div class="l">Years designing</div>
-        </div>
-        <div class="np-stat">
-            <div class="v"><span class="accent">2</span></div>
-            <div class="l">Bestselling novels</div>
-        </div>
-        <div class="np-stat">
-            <div class="v"><span class="accent">80</span>%</div>
-            <div class="l">Wait-time reduction</div>
-        </div>
-        <div class="np-stat">
-            <div class="v">AI<span class="accent">·</span>Native</div>
-            <div class="l">Design fluency</div>
-        </div>
+        <div class="np-stat"><div class="v"><span class="accent">10</span>+</div><div class="l">Years designing</div></div>
+        <div class="np-stat"><div class="v"><span class="accent">2</span></div><div class="l">Bestselling novels</div></div>
+        <div class="np-stat"><div class="v"><span class="accent">80</span>%</div><div class="l">Wait-time reduction</div></div>
+        <div class="np-stat"><div class="v">AI<span class="accent">·</span>Native</div><div class="l">Design fluency</div></div>
     </div>
 
     <!-- 4. Case Studies -->
@@ -1001,8 +669,7 @@
         <div class="np-section-head">
             <div class="eyebrow">Selected Work</div>
             <h2>Case studies</h2>
-            <p class="lede">Two recent projects exploring inclusive AI and contactless hospitality — each end-to-end,
-                from research to design system.</p>
+            <p class="lede">Three end-to-end projects — inclusive AI, contactless hospitality, and emotional curation — each taken from research through to a working design system.</p>
         </div>
 
         <div class="np-case-grid">
@@ -1016,17 +683,8 @@
                             <div class="mini-status">
                                 <span>9:41</span>
                                 <span style="display:flex; gap:3px; align-items:center;">
-                                    <svg width="12" height="8" viewBox="0 0 17 10">
-                                        <rect x="0" y="6.5" width="2.6" height="3.5" rx="0.5" fill="#2A2113" />
-                                        <rect x="4" y="4.5" width="2.6" height="5.5" rx="0.5" fill="#2A2113" />
-                                        <rect x="8" y="2.5" width="2.6" height="7.5" rx="0.5" fill="#2A2113" />
-                                        <rect x="12" y="0" width="2.6" height="10" rx="0.5" fill="#2A2113" />
-                                    </svg>
-                                    <svg width="18" height="8" viewBox="0 0 24 11">
-                                        <rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#2A2113"
-                                            stroke-opacity="0.4" fill="none" />
-                                        <rect x="2" y="2" width="18" height="7" rx="1.5" fill="#2A2113" />
-                                    </svg>
+                                    <svg width="12" height="8" viewBox="0 0 17 10"><rect x="0" y="6.5" width="2.6" height="3.5" rx="0.5" fill="#2A2113"/><rect x="4" y="4.5" width="2.6" height="5.5" rx="0.5" fill="#2A2113"/><rect x="8" y="2.5" width="2.6" height="7.5" rx="0.5" fill="#2A2113"/><rect x="12" y="0" width="2.6" height="10" rx="0.5" fill="#2A2113"/></svg>
+                                    <svg width="18" height="8" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#2A2113" stroke-opacity="0.4" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1.5" fill="#2A2113"/></svg>
                                 </span>
                             </div>
                             <div class="mini-mend-body">
@@ -1036,10 +694,7 @@
                                     <p>Bring a treasured photo back to life — gently.</p>
                                 </div>
                                 <button class="mini-mend-btn">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M20.8 7.2a5.4 5.4 0 0 0-9.3-3.8L11 4l-.5-.6a5.4 5.4 0 0 0-8 7.2l7.6 8.4a1.2 1.2 0 0 0 1.8 0l7.6-8.4a5.4 5.4 0 0 0 1.3-3.4Z" />
-                                    </svg>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.8 7.2a5.4 5.4 0 0 0-9.3-3.8L11 4l-.5-.6a5.4 5.4 0 0 0-8 7.2l7.6 8.4a1.2 1.2 0 0 0 1.8 0l7.6-8.4a5.4 5.4 0 0 0 1.3-3.4Z"/></svg>
                                     Begin a memory
                                 </button>
                             </div>
@@ -1054,9 +709,7 @@
                         <span>2026</span>
                     </div>
                     <h3>Mend — Bridging Memories &amp; Machines</h3>
-                    <p>A mobile companion that brings generative AI to senior users through a calm, conversational
-                        journey. Mend turns 'data processing' into a 'storytelling journey,' ensuring technology serves
-                        the memory, not the other way around.</p>
+                    <p>A mobile companion that brings generative AI to senior users through a calm, conversational journey. Mend turns 'data processing' into a 'storytelling journey,' ensuring technology serves the memory, not the other way around.</p>
                     <div class="np-case-outcome">
                         <div>
                             <div class="l">Outcome</div>
@@ -1077,17 +730,8 @@
                             <div class="mini-status">
                                 <span>9:41</span>
                                 <span style="display:flex; gap:3px; align-items:center;">
-                                    <svg width="12" height="8" viewBox="0 0 17 10">
-                                        <rect x="0" y="6.5" width="2.6" height="3.5" rx="0.5" fill="#0F1F33" />
-                                        <rect x="4" y="4.5" width="2.6" height="5.5" rx="0.5" fill="#0F1F33" />
-                                        <rect x="8" y="2.5" width="2.6" height="7.5" rx="0.5" fill="#0F1F33" />
-                                        <rect x="12" y="0" width="2.6" height="10" rx="0.5" fill="#0F1F33" />
-                                    </svg>
-                                    <svg width="18" height="8" viewBox="0 0 24 11">
-                                        <rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#0F1F33"
-                                            stroke-opacity="0.4" fill="none" />
-                                        <rect x="2" y="2" width="18" height="7" rx="1.5" fill="#0F1F33" />
-                                    </svg>
+                                    <svg width="12" height="8" viewBox="0 0 17 10"><rect x="0" y="6.5" width="2.6" height="3.5" rx="0.5" fill="#0F1F33"/><rect x="4" y="4.5" width="2.6" height="5.5" rx="0.5" fill="#0F1F33"/><rect x="8" y="2.5" width="2.6" height="7.5" rx="0.5" fill="#0F1F33"/><rect x="12" y="0" width="2.6" height="10" rx="0.5" fill="#0F1F33"/></svg>
+                                    <svg width="18" height="8" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#0F1F33" stroke-opacity="0.4" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1.5" fill="#0F1F33"/></svg>
                                 </span>
                             </div>
                             <div class="mini-stay-body">
@@ -1100,19 +744,13 @@
                                 <div class="mini-stay-label">Booking ID</div>
                                 <div class="mini-stay-input focus">
                                     <span>RV-7842-Q</span>
-                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#00B2A9"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m5 13 4 4L20 6" />
-                                    </svg>
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#00B2A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L20 6"/></svg>
                                 </div>
                                 <div class="mini-stay-label">Last Name</div>
                                 <div class="mini-stay-input name">Chen</div>
                                 <button class="mini-stay-btn">
                                     Continue
-                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                 </button>
                             </div>
                             <div class="mini-homebar"></div>
@@ -1126,9 +764,7 @@
                         <span>2026</span>
                     </div>
                     <h3>Safe Stay — Contactless Check-in &amp; Check-out</h3>
-                    <p>A secure, end-to-end digital ecosystem that lets guests bypass the front desk entirely.
-                        Integrates seamless ID verification with instant digital key issuance — transforming a
-                        high-friction physical process into a fluid mobile experience.</p>
+                    <p>A secure, end-to-end digital ecosystem that lets guests bypass the front desk entirely. Integrates seamless ID verification with instant digital key issuance — transforming a high-friction physical process into a fluid mobile experience.</p>
                     <div class="np-case-outcome">
                         <div>
                             <div class="l">Outcome</div>
@@ -1140,6 +776,53 @@
                 </div>
             </article>
 
+            <!-- ── Case 3: MoodBites ─────────────────── -->
+            <article class="np-case moodbites">
+                <div class="np-case-visual">
+                    <div class="mini-phone moodbites">
+                        <div class="mini-phone-screen">
+                            <div class="mini-island"></div>
+                            <div class="mini-status">
+                                <span>9:41</span>
+                                <span style="display:flex; gap:3px; align-items:center;">
+                                    <svg width="12" height="8" viewBox="0 0 17 10"><rect x="0" y="6.5" width="2.6" height="3.5" rx="0.5" fill="#1A1410"/><rect x="4" y="4.5" width="2.6" height="5.5" rx="0.5" fill="#1A1410"/><rect x="8" y="2.5" width="2.6" height="7.5" rx="0.5" fill="#1A1410"/><rect x="12" y="0" width="2.6" height="10" rx="0.5" fill="#1A1410"/></svg>
+                                    <svg width="18" height="8" viewBox="0 0 24 11"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="#1A1410" stroke-opacity="0.4" fill="none"/><rect x="2" y="2" width="18" height="7" rx="1.5" fill="#1A1410"/></svg>
+                                </span>
+                            </div>
+                            <div class="mini-mood-body">
+                                <div class="mini-mood-greet">Good evening, Maya</div>
+                                <div class="mini-mood-title">How are you<br>feeling tonight?</div>
+                                <div class="mini-mood-pill"><div class="mini-mood-ring" style="background:#F4A261">☀</div><div><div class="mini-mood-name">Happy</div><div class="mini-mood-desc">Bright, vibrant</div></div></div>
+                                <div class="mini-mood-pill sel"><div class="mini-mood-ring" style="background:#8B4F47">❤</div><div><div class="mini-mood-name">Cozy</div><div class="mini-mood-desc">Warm, comforting</div></div></div>
+                                <div class="mini-mood-pill"><div class="mini-mood-ring" style="background:#5A8C7B">◐</div><div><div class="mini-mood-name">Need Calm</div><div class="mini-mood-desc">Light, gentle</div></div></div>
+                                <button class="mini-mood-btn">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M5 7l3 3M19 7l-3 3M3 14h4M17 14h4M8 21l-2-7h12l-2 7Z"/></svg>
+                                    Surprise me
+                                </button>
+                            </div>
+                            <div class="mini-homebar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="np-case-body">
+                    <div class="np-case-meta">
+                        <span class="np-tag-accent">AI · Curation</span>
+                        <span>iOS &amp; Android</span>
+                        <span>2026</span>
+                    </div>
+                    <h3>MoodBites — Order How You Feel</h3>
+                    <p>An AI-powered food delivery concept that swaps endless scrolling for emotional curation. Pick a mood, get a handful of meals that fit the moment — with “Surprise me” as a one-tap escape from deciding at all.</p>
+                    <div class="np-case-outcome">
+                        <div>
+                            <div class="l">Outcome</div>
+                            <div class="v">≤3 taps to order · 8 picks max · 9/10 testers preferred it</div>
+                        </div>
+                    </div>
+                    <a href="moodbites.html" class="np-case-cta">Explore Case Study</a>
+                    <a href="moodbites.html" class="np-case-link">Read more</a>
+                </div>
+            </article>
+
         </div>
     </section>
 
@@ -1148,28 +831,19 @@
         <div class="np-section-head">
             <div class="eyebrow">About</div>
             <h2>Two crafts. One discipline.</h2>
-            <p class="lede">I move between product design and fiction writing — and have spent ten years learning that
-                they're the same job. Both are about structuring journeys for people who are paying attention with
-                feeling, not just function.</p>
+            <p class="lede">I move between product design and fiction writing — and have spent ten years learning that they're the same job. Both are about structuring journeys for people who are paying attention with feeling, not just function.</p>
         </div>
 
         <div class="np-about-grid">
             <div class="np-about-card">
                 <div class="label">The UX Designer</div>
                 <h3>Systems, accessibility, and AI</h3>
-                <p>I build scalable design systems in Figma and Figma Make — leveraging variables, complex auto-layout,
-                    and robust components to deliver production-ready frameworks that bridge creative vision and code.
-                    What sets me apart is fluency in AI-native design: hands-on expertise in Claude, Claude-powered
-                    workflows, and prompt engineering to streamline complex processes and make emerging technology
-                    accessible.</p>
+                <p>I build scalable design systems in Figma and Figma Make — leveraging variables, complex auto-layout, and robust components to deliver production-ready frameworks that bridge creative vision and code. What sets me apart is fluency in AI-native design: hands-on expertise in Claude, Claude-powered workflows, and prompt engineering to streamline complex processes and make emerging technology accessible.</p>
             </div>
             <div class="np-about-card">
                 <div class="label">The Author &amp; Strategist</div>
                 <h3>Narrative as a UX discipline</h3>
-                <p>My background as the author of two bestselling novels gives me a unique perspective on experience
-                    design. Storytelling is foundational — it lets me articulate user journeys, frame design problems
-                    clearly for stakeholders, and craft compelling narratives around a product vision. The structural
-                    rigor I bring to plotting a thriller is the same I bring to mapping an edge case.</p>
+                <p>My background as the author of two bestselling novels gives me a unique perspective on experience design. Storytelling is foundational — it lets me articulate user journeys, frame design problems clearly for stakeholders, and craft compelling narratives around a product vision. The structural rigor I bring to plotting a thriller is the same I bring to mapping an edge case.</p>
             </div>
         </div>
 
@@ -1209,8 +883,7 @@
         <div class="np-section-head">
             <div class="eyebrow">Published Novels</div>
             <h2>The writer's voice.</h2>
-            <p class="lede">Two bestselling novels in contemporary romance and suspense — both demand the same skill UX
-                needs: making people care, all the way through.</p>
+            <p class="lede">Two bestselling novels in contemporary romance and suspense — both demand the same skill UX needs: making people care, all the way through.</p>
         </div>
 
         <div class="np-books-grid">
@@ -1219,8 +892,7 @@
                 <div class="np-book-content">
                     <h4>Dawn in Florence</h4>
                     <div class="genre">Contemporary Romance</div>
-                    <p>A gripping contemporary romance set against the backdrop of Florence — second chances and
-                        destiny, told through narrative flow and emotional intelligence.</p>
+                    <p>A gripping contemporary romance set against the backdrop of Florence — second chances and destiny, told through narrative flow and emotional intelligence.</p>
                     <a href="https://www.amazon.com/dp/B08DMX288Q" target="_blank">Buy on Amazon →</a>
                 </div>
             </div>
@@ -1230,8 +902,7 @@
                 <div class="np-book-content">
                     <h4>Jhiri in the Cowboy Street</h4>
                     <div class="genre">Suspense Thriller</div>
-                    <p>An enthralling suspense thriller requiring the same rigor I bring to mapping complex user flows.
-                        Reached bestseller status shortly after publication.</p>
+                    <p>An enthralling suspense thriller requiring the same rigor I bring to mapping complex user flows. Reached bestseller status shortly after publication.</p>
                     <a href="https://www.amazon.com/dp/B08W2GL4SZ" target="_blank">Buy on Amazon →</a>
                 </div>
             </div>
@@ -1242,22 +913,14 @@
     <section id="contact" class="section dark-bg">
         <div class="np-section-head" style="text-align:center; max-width:700px; margin: 0 auto 30px;">
             <div class="eyebrow" style="color:#00d2ff;">Let's Connect</div>
-            <h2 style="text-align:center !important; color:var(--color-white) !important;">Let's design something
-                memorable.</h2>
-            <p class="lede" style="color:#bdbdbd; margin: 0 auto;">Available for senior product design roles, AI-native
-                design consulting, and design system collaborations.</p>
+            <h2 style="text-align:center !important; color:var(--color-white) !important;">Let's design something memorable.</h2>
+            <p class="lede" style="color:#bdbdbd; margin: 0 auto;">Available for senior product design roles, AI-native design consulting, and design system collaborations.</p>
         </div>
 
         <div class="np-contact" style="grid-template-columns: 1fr; max-width: 520px;">
-            <a href="https://www.linkedin.com/in/nayanaphukan/" target="_blank" class="np-contact-card"
-                style="display:block; text-align:center;">
+            <a href="https://www.linkedin.com/in/nayanaphukan/" target="_blank" class="np-contact-card" style="display:block; text-align:center;">
                 <div class="icon" style="margin: 0 auto 16px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
-                        <rect x="2" y="9" width="4" height="12" />
-                        <circle cx="4" cy="4" r="2" />
-                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </div>
                 <div class="label">LinkedIn</div>
                 <div class="value" style="font-size: 1.35rem;">Connect with me on LinkedIn</div>
